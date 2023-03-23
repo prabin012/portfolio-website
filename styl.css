@@ -133,15 +133,15 @@ font-family: 'Shadows Into Light', cursive;
     justify-content: space-evenly;
     align-items: center;
     position:absolute;
-    left: 20%;
-    top: 20%;
+    left: 25%;
+    top: 25%;
     border-radius: .2rem;
    
 }
 .content-1 {
     position: relative;
     margin-left: -7rem;
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: white;
     /* text-align: center; */
     font-family: 'Baloo Bhaina 2', cursive;
@@ -164,7 +164,7 @@ font-family: 'Shadows Into Light', cursive;
 .content-1 h3{
   
    color :whitesmoke;
-   font-size: 1.7rem;
+   font-size: 1.4rem;
 
 }
 .btn-6{
@@ -211,7 +211,7 @@ img:hover{
 }
 .contain-about{
     width: 100%;
-    height: 70vh;
+    height: auto;
     display: flex;
    justify-content:space-evenly;
    position: relative;
@@ -232,9 +232,12 @@ img:hover{
 .about-col-2 {
     width: 35%;
 }
+.about-col-2 span{
+    color: #f3b109;
+}
 .about-col-2 h1{
     margin:1rem 2rem;
-    font-size: 2rem;
+    font-size: 3rem;
     margin-top: 4rem;
    
 }
@@ -242,8 +245,8 @@ img:hover{
 
 
 .about-col-1 img{
-    width: 92%;
-    height: 45vh;
+    width: 82%;
+    height: 65vh;
     /* height: 41vh; */
     margin-left: 8rem;
     margin-top: 5rem;
@@ -252,7 +255,7 @@ img:hover{
 }
 .sub-contain-1{
     color :whitesmoke;
-   font-size: 1.7rem;
+   font-size: 1.4rem;
    font-family: 'Baloo Bhaina 2', cursive;
    line-height: 2rem;
 }
@@ -287,20 +290,25 @@ img:hover{
 }
 #Education{
     width: 100%;
-    height: 60vh;
+    height: auto;
     background-color: #00001A;
     margin-top: -1rem;
     text-align: left;
     padding-top: 4rem;
+    padding-bottom: 1rem;
 }
 .sc-2{
-    margin-left:28rem;
+    margin-left:18rem;
     margin-bottom: 12rem;
     font-size: 2rem;
 }
+.sc-2 h1{
+    font-size: 3rem;
+}
 .sc-2 p{
     margin-left: 1rem;
-    font-size: 1.7rem;
+    font-size: 1.4rem;
+    color: aqua;
 }
 .sc-2 span{
     margin-left: 2rem;
@@ -377,8 +385,11 @@ img:hover{
     /* background-color: rgba(12, 4, 51, 0.613); */
     width: 100%;
     background-color: #00001A;
-    height: 100vh;
+    height: 58rem;
+    /* position: relative; */
+    padding-bottom: 2rem;
     text-align: center;
+    margin-top: -1rem;
     /* border: 3rem solid white; */
    
 }
@@ -392,6 +403,8 @@ img:hover{
     flex-direction:row;
     justify-content:space-evenly;
     position: absolute;
+    padding-bottom: 1rem;
+    color: white;
     
     left:5%;
 }
@@ -434,7 +447,8 @@ img:hover{
 }
 .b-1{
     width: 26%;
-    height: 40vh;
+    height: auto;
+    padding-bottom: 1rem;
     margin: 2rem;
     /* border-radius: 10rem; */
     box-shadow: 0 0 2rem rgba(137, 127, 127, 0.15);
@@ -474,7 +488,7 @@ img:hover{
     padding: 0rem .7rem;
 }
 .b-1 p{
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: wheat;
     padding: 1rem;
     text-align: left;
@@ -495,7 +509,7 @@ img:hover{
 #contect{
     background-color:#00001af6;
     width: 100%;
-    height: 60rem;
+    height: auto;
     
     
     
@@ -507,14 +521,14 @@ img:hover{
 }
 .detail h1{
     color:#ff9901;
-    font-size:4rem;   
+    font-size:3rem;   
     font-weight: 600;
 }
 .detail{
     color: aliceblue;
     margin:4rem 6rem;
     line-height: 3rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 .links .icon-2:hover{
    background-color:transparent;
@@ -523,7 +537,7 @@ img:hover{
    
 }
 .links .icon-2{
-    font-size: 3rem;
+    font-size: 2rem;
     margin: 0 1rem;
     color:#8d918f;
     padding: 0;
@@ -534,8 +548,8 @@ img:hover{
     color: wheat;
     display: flex;
     flex-direction: column;
-    width: 30%;
-    height:50rem;
+    width: 25%;
+    height:36rem;
     position: relative;
     top: 3rem;
     margin-bottom: 7rem;
@@ -543,18 +557,19 @@ img:hover{
     border-radius: 3rem;
     text-align: center;
     box-shadow: 0 0 2rem #f3b109;
+    padding-bottom: 1rem;
     
     
 }
 .contect-1 h1{
-    padding: 2rem;
+    padding: 1.3rem;
 }
 .text-1{
-    margin: .7rem 2rem;
-    padding: .9rem;
+    margin: .7rem 1.1rem;
+    padding: .6rem;
     background-color: rgba(64, 60, 60, 0.151);
     color: wheat;
-    font-size: 1.7rem ;
+    font-size: 1rem ;
     border-radius: 1rem;
     border: none;
     
@@ -567,26 +582,27 @@ img:hover{
     padding-top: 3rem;
 }
 .sumbit-btn{
-    font-size: 1.5rem;
-    padding: .6rem 0;
-    width: 7rem;
+    font-size: 1.3rem;
+    padding: .3rem 0;
+    width: 90%;
     color: rgb(6, 6, 6);
     position: absolute;
     bottom:1.7rem;
-    right:3rem;
-    border-radius: .8rem;
+    left:1.5rem;
+    border-radius: 1rem;
     background-color:#ff9901;
     
 }
 .sumbit-btn:hover{
     background-color: blue;
+    transition: .4s ease;
 }
 .len{
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #00001A;
-  width: 40rem;
+  width: 20rem;
   padding: .5rem;
   border-radius: 1.7rem;
   box-shadow: 0 0 1.5rem #f3b109;
@@ -602,13 +618,13 @@ img:hover{
 .footer{
     background-color:#00001A;
     width: 100%;
-    height: 7rem;
+
 }
 .footer h1{
     text-align: center;
     color: wheat;
-    font-size: 2rem;
-    padding: .8rem;
+    font-size: 1.5rem;
+    padding:1rem;
     font-weight: 100;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -626,6 +642,8 @@ img:hover{
     height: auto;
     padding-top: 150px;
    padding-bottom:150px;
+   margin-top: -1rem;
+
    
 
 }
@@ -697,24 +715,29 @@ img:hover{
 }
 /* ************************************************ */
 .project-22{
-    /* background-color: rgba(12, 4, 51, 0.613); */
+
     width: 100%;
     background-color: #00001A;
-    height: 60rem;
+    height: 50rem;
+    padding-bottom: 1rem;
     text-align: center;
     margin-top: -10PX;
     /* border: 3rem solid white; */
    
 }
 .project-23{
-    height: 50rem;
+    height: 80rem;
+  
+}
+.project-23 h1{
+    font-size: 2rem;
 }
 .project-22 h1{
-    font-size: 5rem;
+    font-size: 4rem;
 }
 .i-2{
-    font-size: 3rem;
-    /* padding:10rem 20rem; */
+    font-size: 2rem;
+
     background-color:transparent;
     position: relative;
     bottom: 0rem;
@@ -727,21 +750,27 @@ img:hover{
 .s-1{
     box-shadow: 0 0 1rem rgba(227, 224, 224, 0.15); 
     width: 20%;
+    height: auto;
+    padding-bottom: .3rem;
 }
 .s-1 h2{
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 .s-1:hover{
-    /* background-color: #ff9901; */
-    /* color:#00001A; */
     box-shadow:none;
     transition:0.5s;
    border-radius:none;
    box-shadow: 0 0 .7rem rgba(137, 127, 127, 0.15);
 }
 .s-5{
-    height: 40rem;
+    /* height: 40rem; */
 }
+.s-3{
+ 
+    width: 35rem;
+    margin: 1rem;
+}
+
 
 /* ************************************************ */
 .imags{
