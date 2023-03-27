@@ -15,15 +15,15 @@ font-family: 'Shadows Into Light', cursive;
  */
 
  :root{
-    --primary-color:white;
-    --Secondary-color:#000024;
+    --primary-color:#000024;
+    --Secondary-color:white;
     --four-color:rgb(12, 245, 218);
-    --tri-color :rgba(49, 41, 41, 0.997);
+    --tri-color :rgba(86, 81, 81, 0.997);
  }
  .dark-them{
-    --primary-color:black;
+    --primary-color:white;
     --four-color:rgb(255, 0, 0);
-    --Secondary-color:white;
+    --Secondary-color:#000024;
     --tri-color :rgba(49, 41, 41, 0.997);
  }
  .i-999{
