@@ -13,6 +13,42 @@ font-family: 'Oleo Script Swash Caps', cursive;
 font-family: 'Roboto Slab', serif;
 font-family: 'Shadows Into Light', cursive;
  */
+
+ :root{
+    --primary-color:white;
+    --Secondary-color:#00001A;
+    --four-color:rgb(12, 245, 218);
+    --tri-color :rgba(49, 41, 41, 0.997);
+ }
+ .dark-them{
+    --primary-color:#00001A;
+    --four-color:rgb(255, 0, 0);
+    --Secondary-color:white;
+    --tri-color :rgba(49, 41, 41, 0.997);
+ }
+ .i-999{
+    position: absolute;
+    right: 100px;
+    top: 18px;
+    width: 30px;
+    border-radius: 88px;
+ }
+
+ .i-990{
+    display: none;
+    padding-left: 100px;
+    color: var(--primary-color);
+    font-size: 25px;
+    position: absolute;
+    right: 150px;
+    top: 30px;
+ }
+ .moodon{
+    display: block;
+ }
+ .moodoff{
+    display: none;
+ }
 *{
     padding: 0;
     margin: 0;
@@ -27,9 +63,13 @@ font-family: 'Shadows Into Light', cursive;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: #00001A;
+    background-color:var(--Secondary-color);
 }
 .nav-ic{
+    display: block;
+
+}
+#nav{
     display: none;
 }
 #close{
@@ -57,7 +97,7 @@ font-family: 'Shadows Into Light', cursive;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 0 1rem rgba(78, 77, 73, 0.764);
+    box-shadow: 0 0 20px  var(--tri-color);
     
 }
 
@@ -76,7 +116,7 @@ font-family: 'Shadows Into Light', cursive;
 .navbar ul li a{
     text-decoration: none;
     margin: .6rem;
-    color: rgb(245, 237, 237);
+    color: var(--primary-color);
     font-size: 1.3rem;
     font-weight: 500;
     position: relative;
@@ -111,16 +151,17 @@ font-family: 'Shadows Into Light', cursive;
 /*..........logo styl.........*/
 .logo{
     margin-left: 18.4rem;
-    background-color:#00001A;
-    color: aliceblue;
+    background-color:var(--Secondary-color);
+    color: var(--primary-color);
     padding: 1rem;
     font-size: 1.3rem;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Roboto Slab', serif;
     border-radius: .6rem;
-    box-shadow: 0 0 1.3rem #ff9901;
+    box-shadow: 0 0 1.3rem var(--tri-color);
 }
 .logo span{
     color: rgb(255, 0, 0);
+   
 }
 
 
@@ -142,7 +183,7 @@ font-family: 'Shadows Into Light', cursive;
     position: relative;
     margin-left: -7rem;
     font-size: 2rem;
-    color: white;
+    color: var(--primary-color);
     /* text-align: center; */
     font-family: 'Baloo Bhaina 2', cursive;
     display: flex;
@@ -158,17 +199,17 @@ font-family: 'Shadows Into Light', cursive;
 
 }
 .cont-66{
-    color :#ff9901;  
+    color :#f7a009;  
     font-family: 'Baloo Bhaina 2', cursive;
 }
 .content-1 h3{
   
-   color :whitesmoke;
+    color: var(--primary-color);
    font-size: 1.4rem;
 
 }
 .btn-6{
-    color: white;
+    color: var(--primary-color);
     background-color: #ff9901;
     font-size: 1.2re,;
     width: 15rem;
@@ -180,7 +221,7 @@ font-family: 'Shadows Into Light', cursive;
 }
 .btn-6 a{
     text-decoration: none;
-    color: white;
+    color: var(--primary-color);
 }
 .btn-6:hover{
    background-color: rgb(1, 155, 155);
@@ -195,8 +236,8 @@ font-family: 'Shadows Into Light', cursive;
     height: auto;
     position: relative;
     margin-right: 13rem;
-    border: .2rem solid black;
-    box-shadow: -38rem 10rem 55rem rgb(0 0 0 / 15%);
+    /* border: .2rem solid black; */
+    box-shadow: 0 0 100px var(--tri-color);
 }
 img:hover{
     cursor: pointer;
@@ -204,7 +245,7 @@ img:hover{
 }
 /*...........about and content styl.........*/
 #about{
-    background-color: #00001A;
+    background-color:var(--Secondary-color);
     width: 100%;
     overflow: hidden;
     /* width: 100vh; */
@@ -223,7 +264,7 @@ img:hover{
     width: 20%;
 } */
 .about-col-1 p{
-    border: .7rem solid black;
+    border: .7rem solid var(--Secondary-color);
     margin: 1.3rem;
     font-size: 2rem;
     
@@ -251,10 +292,11 @@ img:hover{
     margin-left: 8rem;
     margin-top: 5rem;
     border-radius: 1rem;
+    box-shadow: 0 0 90px var(--tri-color);
 
 }
 .sub-contain-1{
-    color :whitesmoke;
+    color: var(--primary-color);
    font-size: 1.4rem;
    font-family: 'Baloo Bhaina 2', cursive;
    line-height: 2rem;
@@ -264,7 +306,7 @@ img:hover{
     margin: 2rem 1.6rem;
 }
 .sub-link{
-   color: aliceblue;
+    color: var(--primary-color);
    
    padding: -1rem 20rem;
    cursor: pointer;
@@ -291,7 +333,7 @@ img:hover{
 #Education{
     width: 100%;
     height: auto;
-    background-color: #00001A;
+    background-color:var(--Secondary-color);
     margin-top: -1rem;
     text-align: left;
     padding-top: 4rem;
@@ -308,7 +350,7 @@ img:hover{
 .sc-2 p{
     margin-left: 1rem;
     font-size: 1.4rem;
-    color: aqua;
+    color:var(--four-color);
 }
 .sc-2 span{
     margin-left: 2rem;
@@ -330,15 +372,15 @@ img:hover{
 }
 
 .sub-contain-3 p{
-    border: 2rem solid black;
+    border: 2rem solid var(--Secondary-color);
     padding: 20rem;
     transition: 0.5s;
-    color: aliceblue;
+    color: var(--primary-color);
     
 }
 .photo--14{
     display: block;
-    background-color: rgba(0, 0, 0, 0.835);
+    background-color:var(--Secondary-color);
 }
 .row-1{
     margin-left:20rem;
@@ -367,7 +409,7 @@ img:hover{
    border-radius: 20rem;
    transition: all 0.4s;
    border: none;
-   box-shadow: 10rem 20rem 15rem rgba(245, 179, 179, 0.23);
+   box-shadow: 10px 20px 15px var(--primary-color);
  
 
 }
@@ -384,7 +426,7 @@ img:hover{
 #blog{
     /* background-color: rgba(12, 4, 51, 0.613); */
     width: 100%;
-    background-color: #00001A;
+    background-color:var(--Secondary-color);
     height: 58rem;
     /* position: relative; */
     padding-bottom: 2rem;
@@ -404,15 +446,14 @@ img:hover{
     justify-content:space-evenly;
     position: absolute;
     padding-bottom: 1rem;
-    color: white;
-    
+    color: var(--primary-color);
     left:5%;
 }
 .skills h1{
     text-align: center;
 }
 .skills h2{
-    color: white;
+    color: var(--primary-color);
 }
 /* .skill-3::after{
     content: " ";
@@ -434,7 +475,7 @@ img:hover{
 }
 
 .card img{
-    color: white;
+    color: var(--primary-color);
 }
 .card-img-top{
     height: 30vh;
@@ -451,7 +492,7 @@ img:hover{
     padding-bottom: 1rem;
     margin: 2rem;
     /* border-radius: 10rem; */
-    box-shadow: 0 0 2rem rgba(137, 127, 127, 0.15);
+    box-shadow: 0 0 4rem var(--tri-color);
     /* background-color: #5e5950; */
 }
 #i-2{
@@ -479,7 +520,7 @@ img:hover{
 }
 .i-1{
     font-size: 4.5rem;
-    color: wheat;
+    color: var(--primary-color);
     font-weight: 600;
     margin: 1rem
 }
@@ -489,7 +530,7 @@ img:hover{
 }
 .b-1 p{
     font-size: 1rem;
-    color: wheat;
+    color: var(--primary-color);
     padding: 1rem;
     text-align: left;
     padding-left: 1.3rem;
@@ -503,11 +544,12 @@ img:hover{
     /* background-color: #ff9901; */
     /* color:#00001A; */
     box-shadow:0 0 2.5rem #ff9901;
-    transition: .5s ease;
+    transition: 0.5s ease-out;
    border-radius: 0rem;
+  
 }
 #contect{
-    background-color:#00001af6;
+    background-color:var(--Secondary-color);
     width: 100%;
     height: auto;
     
@@ -525,7 +567,7 @@ img:hover{
     font-weight: 600;
 }
 .detail{
-    color: aliceblue;
+    color: var(--primary-color);
     margin:4rem 6rem;
     line-height: 3rem;
     font-size: 1.5rem;
@@ -545,7 +587,7 @@ img:hover{
     border-radius: 50%;
 }
 .contect-1{
-    color: wheat;
+    color: var(--primary-color);
     display: flex;
     flex-direction: column;
     width: 25%;
@@ -553,7 +595,7 @@ img:hover{
     position: relative;
     top: 3rem;
     margin-bottom: 7rem;
-    background-color:#00001A;
+    background-color:var(--Secondary-color);
     border-radius: 3rem;
     text-align: center;
     box-shadow: 0 0 2rem #f3b109;
@@ -567,8 +609,8 @@ img:hover{
 .text-1{
     margin: .7rem 1.1rem;
     padding: .6rem;
-    background-color: rgba(64, 60, 60, 0.151);
-    color: wheat;
+    background-color: var(--Secondary-color);
+    color: var(--primary-color);
     font-size: 1rem ;
     border-radius: 1rem;
     border: none;
@@ -576,7 +618,7 @@ img:hover{
 }
 .contect-0 h1{
     font-size: 3rem;
-    color: aliceblue;
+    color: var(--primary-color);
     text-align: center;
     margin-bottom: 1.6rem;
     padding-top: 3rem;
@@ -585,7 +627,7 @@ img:hover{
     font-size: 1.3rem;
     padding: .3rem 0;
     width: 90%;
-    color: rgb(6, 6, 6);
+    background-color:var(--Secondary-color);
     position: absolute;
     bottom:1.7rem;
     left:1.5rem;
@@ -601,7 +643,7 @@ img:hover{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #00001A;
+    background-color:var(--Secondary-color);
   width: 20rem;
   padding: .5rem;
   border-radius: 1.7rem;
@@ -616,13 +658,13 @@ img:hover{
     font-size: 3rem;
 }
 .footer{
-    background-color:#00001A;
+    background-color:var(--Secondary-color);
     width: 100%;
 
 }
 .footer h1{
     text-align: center;
-    color: wheat;
+    color: var(--primary-color);
     font-size: 1.5rem;
     padding:1rem;
     font-weight: 100;
@@ -637,7 +679,7 @@ img:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #00001A;
+    background-color:var(--Secondary-color);
     width: auto;
     height: auto;
     padding-top: 150px;
@@ -671,12 +713,12 @@ img:hover{
     border-radius: 50%;
     overflow: hidden;
     border: 2px solid blanchedalmond;
-    box-shadow: 0 0 4px black,
+    box-shadow: 0 0 4px var(--tri-color),
     0 0 6px white;
     transform: rotate(calc(360deg/6*var(--i)));
     transform-origin: 300px;
     z-index: 1;
-    background-color:#00001A;
+    background-color:var(--Secondary-color);
   
     animation: orbit 50s linear infinite;
 }
@@ -691,10 +733,10 @@ img:hover{
 }
 
 .p1{
-    background-color:#00001A;
+    background-color:var(--Secondary-color);
     padding:60px 40px;
     border-radius: 100%;
-    color: antiquewhite;
+    color: var(--primary-color);
     border: 2px solid blanchedalmond;
     cursor: pointer;
 }
@@ -706,7 +748,7 @@ img:hover{
     box-shadow: 0 0 30px  #f21606;
     transition: 0.5s ease;
     background-color: #f3b109;
-    color: #00001A;
+    background-color:var(--Secondary-color);
 }
 @keyframes orbit{
     100%{
@@ -717,7 +759,7 @@ img:hover{
 .project-22{
 
     width: 100%;
-    background-color: #00001A;
+    background-color:var(--Secondary-color);
     height: 50rem;
     padding-bottom: 1rem;
     text-align: center;
@@ -748,7 +790,7 @@ img:hover{
     color: #f3b109;
 }
 .s-1{
-    box-shadow: 0 0 1rem rgba(227, 224, 224, 0.15); 
+    box-shadow: 0 0 4rem var(--tri-color); 
     width: 20%;
     height: auto;
     padding-bottom: .3rem;
@@ -760,7 +802,7 @@ img:hover{
     box-shadow:none;
     transition:0.5s;
    border-radius:none;
-   box-shadow: 0 0 .7rem rgba(137, 127, 127, 0.15);
+   box-shadow: 0 0 .7rem var(--tri-color);
 }
 .s-5{
     /* height: 40rem; */

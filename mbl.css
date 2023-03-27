@@ -1,4 +1,9 @@
-@media (max-width:900px) {
+:root{
+    --primary-color:white;
+    --Secondary-color:#00001A;
+    --tri-color :rgba(49, 41, 41, 0.997);
+ }
+@media (max-width:1100px) {
     body{
      width: 100%;
      overflow-x: hidden;
@@ -7,6 +12,7 @@
      width: 100%;
      overflow-x: hidden;
     }
+   
    .navbar{
      position: relative;
      right: 0;
@@ -34,16 +40,19 @@
     }
     .menu{
      height: 100vh;
-     background-color:#05053f ;
+     background-color: rgb(109, 97, 92);
      position: fixed;
      top: -1rem;
      right: -20rem;
      padding-top: 6rem;
+     /* color: var(--Secondary-color); */
      /* left: 18rem; */
     }
     .navbar li{
      margin-right: 6rem;
+     color: var(--Secondary-color);
     }
+    
  /* **************************** */
  .content {
      width: 100%;
@@ -86,6 +95,10 @@
  
  
  /* ***************** */
+
+#nav{
+    display: block;
+}
  .nav-ic{
      margin-right: 50px;
      font-size: 30px;
@@ -99,9 +112,22 @@
      
     
  }
+ .i-999{
+    position: absolute;
+    top: 0px;
+    font-size: 22px;
+    right: 58px;
+}
+ .i-990{
+    position: absolute;
+    top: 0;
+    font-size: 30px;
+    right: 80px;
+}
  .nav-ic .fa-solid{
      padding: 0px 10px;
      display: block;
+     color: var(--primary-color);
  }
  #close{
      display: block;
@@ -156,7 +182,7 @@
     font-size: 1.4rem;
 }
 #Education{
-    background-color: #00001A;
+    /* background-color: #00001A; */
     margin-top: -1rem;
     text-align: left;
     padding-top: 1rem;
@@ -176,7 +202,7 @@
 .sc-2 p{
     margin-left: 2rem;
     font-size: 1.6rem;
-    color: aqua;
+    /* color: aqua; */
 }
 .sc-2 span{
     margin-left:.5rem;
@@ -214,7 +240,7 @@
     margin: .5rem;
     height: 28rem;
     margin-bottom: 2rem;
-    box-shadow:  0 0 30px #f2920375;
+    /* box-shadow:  0 0 30px #f2920375; */
   
 }
 
@@ -260,7 +286,7 @@
     transform: rotate(calc(360deg/6*var(--i)));
     transform-origin: 15rem;
     z-index: 1;
-    background-color: #00001A;
+    /* background-color: #00001A; */
     animation: orbit 50s linear infinite;
 }
 .container-14 .icon .imag img{
@@ -293,7 +319,7 @@
     width: 90%;
 }
 .i-2{
-    color: rgb(0, 251, 255);
+    /* color: rgb(0, 251, 255); */
 }
 .s-3:hover{
     transform: scale(1.2);

@@ -13,3 +13,24 @@ if(close){
         navba.classList.remove("show");
     })
 }
+
+
+
+ var sunn = document.getElementById('sun');
+
+sunn.onclick = function (){
+    document.body.classList.toggle("dark-them");
+    if(document.body.classList.contains("dark-them"))
+    {
+        sunn.src="./icon/moon-icon.png";
+        
+    }else{
+        sunn.src="icon/sun-xxl.png";
+    }
+}
+    
+
+    // }
+
+
+
