@@ -1,8 +1,4 @@
-/* :root{
-    --primary-color:white;
-    --Secondary-color:#010133;
-    --tri-color :rgba(49, 41, 41, 0.997);
- } */
+
 @media (max-width:1100px) {
     body{
      width: 100%;
