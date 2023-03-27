@@ -320,9 +320,7 @@
    .s-3{
     width: 90%;
 }
-.i-2{
-    /* color: rgb(0, 251, 255); */
-}
+
 .s-3:hover{
     transform: scale(1.2);
 }
