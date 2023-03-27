@@ -16,12 +16,12 @@ font-family: 'Shadows Into Light', cursive;
 
  :root{
     --primary-color:white;
-    --Secondary-color:#00001A;
+    --Secondary-color:#000024;
     --four-color:rgb(12, 245, 218);
     --tri-color :rgba(49, 41, 41, 0.997);
  }
  .dark-them{
-    --primary-color:#00001A;
+    --primary-color:black;
     --four-color:rgb(255, 0, 0);
     --Secondary-color:white;
     --tri-color :rgba(49, 41, 41, 0.997);
