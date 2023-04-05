@@ -161,7 +161,20 @@
     margin-left:.25rem;
     /* margin-right: .3rem; */
     border-radius: 1.4rem;
+   
 }
+@keyframes pic1{
+    from{
+      
+        width: 0%;
+        height: 0%;
+    }to{
+        
+        width: 95%;
+        height: 35rem;
+    }
+}
+
 #about{
     margin-top: -1rem;
     height: 80rem;
@@ -224,6 +237,7 @@
 #blog{
     height: 110rem;
     margin-top: -10px;
+    
 }
 #blog h1{
     font-size: 4rem;
@@ -242,9 +256,19 @@
     margin: .5rem;
     height: 28rem;
     margin-bottom: 2rem;
+   
+    
     /* box-shadow:  0 0 30px #f2920375; */
   
 }
+/* @keyframes pic1{
+    from{
+        left:-400px;
+    }to{
+        left: 0px;
+    }
+} */
+
 
 .pr1{
     display:flex;
