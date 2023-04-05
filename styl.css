@@ -15,15 +15,15 @@ font-family: 'Shadows Into Light', cursive;
  */
 
  :root{
-    --primary-color:#000024;
-    --Secondary-color:white;
+    --primary-color:white;
+    --Secondary-color:#000024;
     --four-color:rgb(12, 245, 218);
-    --tri-color :rgba(86, 81, 81, 0.997);
+    --tri-color :rgba(218, 119, 6, 0.997);
  }
  .dark-them{
-    --primary-color:white;
+    --primary-color:#000024;
     --four-color:rgb(255, 0, 0);
-    --Secondary-color:#000024;
+    --Secondary-color:white;
     --tri-color :rgba(49, 41, 41, 0.997);
  }
  .i-999{
@@ -293,7 +293,7 @@ img:hover{
     margin-left: 3rem;
     margin-top: 5rem;
     border-radius: 1rem;
-    box-shadow: 0 0 90px var(--tri-color);
+    /* box-shadow: 0 0 40px var(--tri-color); */
     animation-name: pic1;
     /* z-index: 999; */
     animation-duration: 5s;
@@ -511,7 +511,7 @@ img:hover{
     padding-bottom: 1rem;
     margin: 2rem;
     /* border-radius: 10rem; */
-    box-shadow: 0 0 4rem var(--tri-color);
+    box-shadow: 0 0 2rem var(--tri-color);
     /* background-color: #5e5950; */
     
 }

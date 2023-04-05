@@ -23,11 +23,11 @@ sunn.onclick = function (){
     if(document.body.classList.contains("dark-them"))
     {
        
-        sunn.src="icon/sun-xxl.png";
+        sunn.src="./icon/moon-icon.png";
         
     }else{
+        sunn.src="icon/sun-xxl.png";
     
-        sunn.src="./icon/moon-icon.png";
     }
 }
     

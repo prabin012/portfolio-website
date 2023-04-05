@@ -1,10 +1,10 @@
 
-:root{
+/* :root{
     --primary-color:#000024;
     --Secondary-color:white;
     --four-color:rgb(12, 245, 218);
     --tri-color :rgba(86, 81, 81, 0.997);
- }
+ } */
 @media (max-width:1100px) {
     body{
      width: 100%;
