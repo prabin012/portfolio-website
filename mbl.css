@@ -23,6 +23,13 @@
    .logo{
      margin-left: 5rem;
    }
+   .typing p{
+    width: auto;
+    margin-right:3rem;
+   }
+   .typing p{
+    height: 25px;
+   }
  
     /* .main{
      width: 100%;
