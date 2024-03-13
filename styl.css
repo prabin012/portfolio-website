@@ -64,7 +64,7 @@ font-family: 'Shadows Into Light', cursive;
     /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
 }
 
-/*  */
+/* git  */
 .t1{
     width: 100%;
     overflow: hidden;
@@ -759,7 +759,7 @@ background-color: var(--Secondary-color);
 
 }
 .ic3{
-    padding:5px;
+    padding:5px 10px;
     border-radius: 6px;
 }
 .ic3:hover{
