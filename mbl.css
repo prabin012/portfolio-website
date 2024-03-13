@@ -5,7 +5,7 @@
     --four-color:rgb(12, 245, 218);
     --tri-color :rgba(86, 81, 81, 0.997);
  } */
-@media (max-width:1100px) {
+@media (max-width:900px) {
     body{
      width: 100%;
      overflow-x: hidden;
@@ -14,92 +14,66 @@
      width: 100%;
      overflow-x: hidden;
     }
-   
-   .navbar{
-     position: relative;
-     right: 0;
-   }
- 
+  .navbars{
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+  }
    .logo{
-     margin-left: 5rem;
+     justify-content: flex-start;
+     margin-left:10px;
    }
    .typing p{
     width: auto;
     margin-right:3rem;
    }
-   .typing p{
-    height: 25px;
-   }
- 
-    /* .main{
-     width: 100%;
-     height: 100vh;
-     background-color: black;
-     background-position: center;
-     background-size: cover;
-     background-repeat: no-repeat;
-     background-color: #00001A;
- } */
-    .navbar ul{
-     display: none;
-    }
+   
     .main{
      width: 100%;
-     height: 50rem;
+     height: auto;
     }
-    .menu{
-     height: 100vh;
-     background-color: rgb(109, 97, 92);
-     position: fixed;
-     top: -1rem;
-     right: -20rem;
-     padding-top: 6rem;
-     /* color: var(--Secondary-color); */
-     /* left: 18rem; */
-    }
-    .navbar li{
+    
+    .navbars li{
      margin-right: 6rem;
      color: var(--Secondary-color);
+
     }
     
  /* **************************** */
  .content {
      width: 100%;
-     left:0;
-     top: 4%;
-    
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+ }
+ .aboutcontienrsas{
+    background-color: rgba(1, 1, 6, 0.958);
+ }
+ .shapesize{
+    display: none;
  }
  .content-1 {
-     
-     /* position: relative; */
-     margin-left: 1.3rem;
-     margin-top:7rem;
-     margin-right: 1rem;
-    
-    
-     
+   width: 100%;
+   background-color: transparent;
+   padding: 15px;
+   margin: 0;
+   height:100vh;
+   z-index: 0;
  }
  .content-1 h3{
  font-size: 1.4rem;
  }
  
- /* .content span{
-     font-size: 40px;
-     font-weight: 600;
- }
- .content p,h3{
-     font-size: 30px;
- } */
- 
  .content img{
-   
      display: none;
- 
  }
  .content .btn-6{
      font-size: 20px;
-     padding: 5px 20px;
-     margin-top: 20px;
+     padding: 10px 20px;
+     border: none;
+     border-radius: 5px;
+
  }
  
  
@@ -114,7 +88,7 @@
      color: wheat;
      display: flex;
      position: absolute;
-     top: 15px;
+     top: 30px;
      right: -15px;
      cursor: pointer;
      font-size: 28px;
@@ -138,6 +112,22 @@
      display: block;
      color: var(--primary-color);
  }
+ .menu{
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--Secondary-color);
+    height: 100vh;
+    padding: 150px;
+    margin: 0;
+     
+      }
+      .navbarmenuItems{
+        padding: 10px 20px;
+        font-size: 20px;
+      }
  #close{
      display: block;
      font-size: 45px;
@@ -148,28 +138,31 @@
      cursor: pointer;
  }
  #navbar.show{
-     display: block;
+    width: 100%;
+     display: flex;
      z-index: 1;
-     /* width: 255px; */
-     /* overflow-x: hidden; */
+     justify-content: flex-start;
+     align-items: flex-start;
+     flex-direction: column;
+     
  }
  .contain-about{
     display: flex;
     flex-wrap: wrap;
-
+    width: 100%;
+    height: auto;
+    /* margin-top: -100px; */
+ }
+ .about-col-1{
+    width: 100%;
+    margin-top: -300px;
  }
 .about-col-1 img {
-    position: relative;
-    width: 95%;
-    height: 35rem;
-    
-    /* margin-left: 19px; */
-    margin-top:2rem;
-    margin-left:.25rem;
-    /* margin-right: .3rem; */
-    border-radius: 1.4rem;
+  width: 100%;
+  height: 100%;
    
 }
+
 @keyframes pic1{
     from{
       
@@ -204,14 +197,20 @@
     font-size: 1.4rem;
 }
 #Education{
-    /* background-color: #00001A; */
-    margin-top: -1rem;
-    text-align: left;
-    padding-top: 1rem;
-    height: 47rem;
-    font-size: 1rem;
-    /* line-height: 50px; */
-    padding: .3rem 1rem;
+   width: 100%;
+   height: auto;
+   padding: 0;
+   margin: 0;
+}
+.EducationHeader{
+    padding: 30px;
+    margin: 0;
+    }
+.educationContainer{
+flex-direction: column;
+}
+.educationBox{
+    width: 90%;
 }
 #Education h1{
     font-size: 4rem;
@@ -243,8 +242,6 @@
 }
 #blog{
     height: 110rem;
-    margin-top: -10px;
-    
 }
 #blog h1{
     font-size: 4rem;
@@ -254,14 +251,17 @@
 }
 .skills{
     width: 100%;
-   /* padding-bottom: 10rem; */
-   /* margin-bottom: 6rem; */
-    left: 0;
+  flex-direction: column;
+}
+.projectsBoxes{
+    width: 90%;
+    padding: 0;
+    margin: 10px 20px;
 }
 .b-1{
-    width: 40%;
+    width: 90%;
     margin: .5rem;
-    height: 28rem;
+    height: auto;
     margin-bottom: 2rem;
    
     
@@ -281,13 +281,13 @@
     display:flex;
     justify-content: center;
     align-items: center;
-    margin-top: -10px;
-    height: 50vh;
+    height: 60vh;
     padding-bottom: -50PX;
    }
    .container-14 {
     position: relative;
     /* left: 4.1rem; */
+     margin-top: 200px;
     top: -8rem;
     width: 23.5rem;
     height: 25rem;
@@ -338,7 +338,7 @@
     font-size:2.4rem;
 }
 .project-22{
-    height: 130rem;
+    height: auto;
     margin-top: -10px;
 }
 .project-23 h1{
@@ -359,18 +359,26 @@
     margin-top: -10px;
    height: auto;
    }
+   .detail{
+    margin: 10px;
+    height: auto;
+    padding: 20px;
+   }
    .form-cont{
     display: flex;
     flex-wrap: wrap;
-    /* padding-left: 90px; */
-    padding-top: 5rem;
+    padding: 10px;
+    padding-bottom: 80px;
+    background-color: var(--Secondary-color);
    }
   .detail h1{
     font-size: 50px;
-    margin-top: -60px;
+    margin-top: 10px;
+    color: var(--primary-color);
   }
   .form-cont p{
     font-size: 20px;
+    padding: 01px;
     
   }
   .len{
@@ -382,8 +390,7 @@
     font-size: 4rem;
   }
   .contect-1 {
-    
-    width: 85%;
+    width: 100%;
     height: auto;
     position: relative;
     top: 10px;
@@ -392,24 +399,16 @@
     0 0 50px rgba(206, 166, 22, 0.517);
 }
 .text-1 {
-    margin: 13px 15px;
-    padding: 15px;
+  
     background-color: rgba(0, 0, 0, 0.151);
-    /* color: wheat; */
-    border-radius: 10px;
+}
+.educatorses{
+    font-size: 40px;
+    padding: 10px;
+    text-align: center;
 }
 .sumbit-btn {
-    font-size: 20px;
-    /* padding: 29px -14px; */
-    width: 22rem;
-    color: rgb(11, 11, 12);
-    position: relative;
-    bottom: -1rem;
-    left: 2.5rem;
-    font-weight: 600;
-    border-radius:25px;
-    background-color: #f3b109;
-    margin-bottom: 3rem;
+   width: 100%;
 
 }
 .sumbit-btn:hover{
@@ -418,7 +417,7 @@
 }
 .footer h1 {
    
-    font-size: 1.7rem;
+    font-size: 1.1rem;
    
   
 }
@@ -442,6 +441,210 @@
   
   
   }
+  .imageGrade{
+    width: 100%;
+    padding: 50px;
+  }
+  
+ 
+
+.ingBorder3{
+    height: 30%;
+    width: 20px;
+    background: linear-gradient(rgb(2, 2, 80), rgb(122, 80, 3));
+    position: absolute;
+    bottom: 0;
+    left: 200px;
+    /* border-left: 5px solid rgb(251, 97, 2); */
+    border-radius: 0px 50px 0px 0px;
+}
+.grades{
+    width: 100%;
+    flex-basis: 100%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: 150px;
+    background-color: transparent;
+    
+    
+
+}
+.gradeItem{
+  object-position: center;
+  overflow: hidden;
+  object-fit: cover;
+}
+.gradeImage{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+   
+    transition: all .5s ease;
+    
+}
+.gradeImage:hover
+{
+    transform: scale(1.1); 
+    /* z-index: 1; */
+}
+.grade1{
+    grid-row: span 1;
+    grid-column: span 3;
+    margin-top: -10px;
+    margin-left: -10px;
+    /* margin: 0; */
+
    
 }
+.grade2{
+    grid-column: span 2;
+    /* display: none; */
+}
+.grade3{
+    grid-column: span 2;
+    /* margin-left: -90px; */
+    margin: 0;
+    /* display: none; */
+}
+.grade5{
+    grid-column: span 2;
+      /* margin-right: -90px; */
+      margin: 0;
+}
+.grade4{
+    grid-column: span 1;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    font-size: 10px;
+  
+}
+.uperbtnscrol{
+    right: 10px;
+    bottom: 10px;
+  }
+  .uoers{
+    font-size: 18px;
+    padding: 10px;
+  }
+.grade10{
+    display: block;
+    grid-column: span 2;
+}
+.grade7{
+    display: block;
+    grid-column: span 2;
+}
+.nameImage{
+    font-size: 10px;
+    color: white;
+}
+.grade6{
+    grid-column: span 2;
+  
+}
+.grade8{
+    grid-column: span 3;
+    margin-bottom: -10px;
+    margin-right: -10px;
+    /* margin: 0; */
+
+}
+
+
+
+/* */
+.innerContainer{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: var(--tri-color);
+    width: 100px;
+    height: 100px;
+    border-radius: 0px 0px 0px 100%;
+    /* border-left: 20px double rgb(141, 92, 2); */
+    box-shadow: 0 0  100px var(--tri-color);
+    /* display: none; */
+}
+.innerContainer1{
+    position: absolute;
+    bottom: 20px;
+    left:20px;
+    background-color: var(--tri-color);
+    width: 100px;
+    height: 100px;
+    border-radius: 0px 100% 0px 0px;
+    /* border-right: 20px double rgb(4, 4, 81); */
+    box-shadow: 20px 0 100px var(--tri-color);
+    /* display: none; */
+    
+}
+.ingBorder{
+    width: 40%;
+    height: 20px;
+    background: linear-gradient(to left,rgb(2, 2, 80) , rgb(122, 80, 3));
+    position: absolute;
+    top: 0;
+    right: 10px;
+    border-radius: 0px 0px 0px 50px;
+    /* display: none; */
+}
+.ingBorder1{
+    height: 30%;
+    width: 20px;
+    /* background-color: red; */
+    background: linear-gradient( to bottom,rgb(2, 2, 80), rgb(122, 80, 3));
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    border-radius: 0px 0px 0px 50px;
+    /* display: none; */
+    
+}
+.ingBorder2{
+    width: 40%;
+    height: 20px;
+    background: linear-gradient(to left ,rgb(2, 2, 80), rgb(122, 80, 3));
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    border-radius: 0px 50px 0px 0px;
+    /* display: none; */
+}
+.ingBorder3{
+    height: 30%;
+    width: 20px;
+    background: linear-gradient(rgb(2, 2, 80), rgb(122, 80, 3));
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    /* border-left: 5px solid rgb(251, 97, 2); */
+    border-radius: 0px 50px 0px 0px;
+    /* display: none; */
+}
+
+
+/*  */
+.ingBaner{
+    height: 15vh;
+    top: 30px;
+    
+}
+.bannerImage{
+    height: 15vh;
+    background-position: bottom;
+  
+}
+.banner{
+    padding-top:30px ;
+    height: 20vh;
+
+}
+}
  
+
