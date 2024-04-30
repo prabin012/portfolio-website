@@ -305,15 +305,15 @@ flex-direction: column;
 }
 .container-14 .icon .imag {
     position: absolute;
-    /* left: -50px; */
-    width: 4rem;
-    height: 4rem;
+    /* left: -20px; */
+    width: 30%;
+    height: 5rem;
     border-radius: 50%;
     overflow: hidden;
     border: 2px solid#e9e7e4;
     box-shadow: 0 0 4px black, 0 0 26px #ff9901;
     transform: rotate(calc(360deg/6*var(--i)));
-    transform-origin: 13rem;
+    transform-origin: 12rem;
     z-index: 1;
     /* background-color: #00001A; */
     animation: orbit 50s linear infinite;   
@@ -664,6 +664,38 @@ flex-direction: column;
 .technologies{
     font-size: 8px;
 }
+.researchesAndpublicationCOnatiner{
+    width: 100%;
+    flex-direction: column;
+}
+.researchBox{
+    width: 90%;
+    text-align: left;
+}
+.researchCertificate{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 10px;
+}
+.researchTitleHeader{
+    font-size: 30px;
+    padding: 20px;
+    padding-bottom: 20px;
+    text-decoration: underline;
+}
+.researchDesc{
+    font-size: 15px;
+  
+}
+.researchtittle{
+    font-size: 25px;
+    color: rgb(225, 222, 222);
+    font-weight: bold;
+    /* text-align: center; */
+}
+
 }
  
 
