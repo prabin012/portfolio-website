@@ -704,6 +704,7 @@ background-color: var(--Secondary-color);
 .i-1 {
     font-size: 2.5rem;
     color: var(--primary-color);
+    padding: 20px;
     
 }
 
@@ -853,14 +854,14 @@ background-color: var(--Secondary-color);
 #banner{
     width: 100%;
     height: auto;
-    background-color: var(--Secondary-color);
+    background-color: rgb(1, 4, 10);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .banner{
-    background-color: var(--Secondary-color);
+    background-color: rgb(1, 4, 10);
     width: 100%;
     height: 70vh;
     /* margin-top: 100px; */
@@ -874,6 +875,19 @@ background-color: var(--Secondary-color);
     background-image: url('../image/prabin-1.jpg');
     background-position: bottom;
     background-size: cover;
+}
+#cl{
+    position: relative;
+}
+.c3{
+    position: absolute;
+    top: 60px;
+    left: 50px;
+    z-index: 999;
+    background-color: #ff99018b;
+    padding: 20px;
+    /* border-radius: 0px 50px 0px 50px; */
+    font-size: 30px;
 }
 .ingBaner{
     width: 100%;
@@ -1468,4 +1482,88 @@ position: relative;
 }
 .researchlink{
     padding: 5px;
+}
+.wrkdwth{
+    color: orange;
+    z-index: 99;
+    font-size: 30px;
+    margin: 30px;
+}
+.workedwith{
+    background-color: rgb(0, 6, 19);
+    height: auto;
+    padding: 50px;
+}
+.workedttl{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.ttl{
+    padding: 20px;
+    font-size: 20px;
+    color: #D8B706;
+}
+.workedcmpny{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+.workimag{
+    margin: 30px;
+    width: 150px;
+    border-radius: 100%;
+}
+.st{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+}
+.carousel-inner{
+    width: 60%;
+    height: 100vh;
+    background-color: rgb(1, 4, 10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+    /* margin-right: 100%; */
+}
+.contHide{
+    width: 65%;
+    margin-right: 100%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: -30%;
+    height: 50vh;
+    border: 1px solid rgb(121, 117, 117);
+    padding: 50px;
+}
+
+.underCont{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    margin-left: 40px;
+}
+.clientMessage{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 17px;
+    color: rgb(90, 83, 83);
+    text-align: justify;
+    padding: 10px;
+}
+.useerCE{
+    color: rgb(255, 128, 0);
+}
+.clientName{
+    color: rgb(153, 148, 148);
+}
+.igt{
+    width: 70px;
+    padding: 10px;
 }

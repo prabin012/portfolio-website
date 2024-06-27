@@ -285,8 +285,8 @@ flex-direction: column;
    }
    .container-14 {
     position: relative;
-    width: 80%;
-    height: 40vh;
+    width: 70%;
+    height: 35vh;
     border-radius: 100%;
     border: 5px solid #ff9901;
 }
@@ -695,7 +695,28 @@ flex-direction: column;
     font-weight: bold;
     /* text-align: center; */
 }
-
+.contHide{
+    flex-direction: column;
+    width: 80%;
+    left: -40%;
+    padding: 10px;
+    align-items: center;
+    height: auto;
+}
+.underCont{
+    width: 100%;
+    margin-left:0;
+}
+.useerCE{
+    font-size: 15px;
+}
+.clientMessage{
+    width: 100%;
+}
+.d-block{
+    width: 200px;
+    margin-top: 16px;
+}
 }
  
 
