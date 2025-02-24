@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Lightbox overlay style */
+      .lightbox-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+      }
+      .lightbox-image {
+        max-width: 90%;
+        max-height: 80%;
+        object-fit: contain;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-900 text-white">
+    <!-- Image Gallery Section -->
+    <section id="imageGallery" class="py-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <h1 class="text-4xl font-bold text-center text-white mb-12">
+          Achievement & Certifications
+        </h1>
+
+        <!-- Image Grid Section (3 images in a row) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <!-- Image Item 1 -->
+          <div
+            class="group relative cursor-pointer overflow-hidden rounded-xl shadow-lg transition-all hover:scale-105"
+          >
+            <img
+              src="./image/c2.jpeg"
+              alt="Certificate 1"
+              class="w-full h-full object-cover rounded-xl"
+              onclick="openLightbox('./image/c2.jpeg')"
+            />
+          </div>
+
+          <!-- Image Item 2 -->
+          <div
+            class="group relative cursor-pointer overflow-hidden rounded-xl shadow-lg transition-all hover:scale-105"
+          >
+            <img
+              src="./image/c3.jpeg"
+              alt="Certificate 2"
+              class="w-full h-full object-cover rounded-xl"
+              onclick="openLightbox('./image/c3.jpeg')"
+            />
+          </div>
+
+          <!-- Image Item 3 -->
+          <div
+            class="group relative cursor-pointer overflow-hidden rounded-xl shadow-lg transition-all hover:scale-105"
+          >
+            <img
+              src="./image/c4.jpeg"
+              alt="Certificate 3"
+              class="w-full h-full object-cover rounded-xl"
+              onclick="openLightbox('./image/c4.jpeg')"
+            />
+          </div>
+          <!-- Image Item 3 -->
+          <div
+            class="group relative cursor-pointer overflow-hidden rounded-xl shadow-lg transition-all hover:scale-105"
+          >
+            <img
+              src="./image/c4.jpeg"
+              alt="Certificate 3"
+              class="w-full h-full object-cover rounded-xl"
+              onclick="openLightbox('./image/c4.jpeg')"
+            />
+          </div>
+          <!-- Image Item 3 -->
+          <div
+            class="group relative cursor-pointer overflow-hidden rounded-xl shadow-lg transition-all hover:scale-105"
+          >
+            <img
+              src="./image/c4.jpeg"
+              alt="Certificate 3"
+              class="w-full h-full object-cover rounded-xl"
+              onclick="openLightbox('./image/c4.jpeg')"
+            />
+          </div>
+          <!-- Image Item 3 -->
+          <div
+            class="group relative cursor-pointer overflow-hidden rounded-xl shadow-lg transition-all hover:scale-105"
+          >
+            <img
+              src="./image/c4.jpeg"
+              alt="Certificate 3"
+              class="w-full h-full object-cover rounded-xl"
+              onclick="openLightbox('./image/c4.jpeg')"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox Overlay -->
+    <div
+      class="lightbox-overlay"
+      id="lightboxOverlay"
+      onclick="closeLightbox()"
+    >
+      <img
+        id="lightboxImage"
+        class="lightbox-image"
+        src=""
+        alt="Full-size image"
+      />
+    </div>
+
+    <script>
+      // Open Lightbox Function
+      function openLightbox(imageSrc) {
+        const lightboxOverlay = document.getElementById("lightboxOverlay");
+        const lightboxImage = document.getElementById("lightboxImage");
+        lightboxImage.src = imageSrc; // Set the source of the lightbox image
+        lightboxOverlay.style.display = "flex"; // Show the overlay
+      }
+
+      // Close Lightbox Function
+      function closeLightbox() {
+        const lightboxOverlay = document.getElementById("lightboxOverlay");
+        lightboxOverlay.style.display = "none"; // Hide the overlay
+      }
+    </script>
+  </body>
+</html>

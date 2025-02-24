@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skills Section</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body
+    class="bg-[#010106] text-white flex items-center justify-center min-h-screen p-6"
+  >
+    <section id="Skills" class="py-10 w-full">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-8">My Skills</h2>
+        <div
+          id="skillsContainer"
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"
+        >
+          <!-- Skills Cards will be inserted here dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Dummy Skills Data
+      const skillsData = [
+        {
+          id: 1,
+          title: "JavaScript",
+          description:
+            "Experienced in ES6+, async/await, and DOM manipulation.",
+          icon: "fa-brands fa-js",
+          color: "text-yellow-400",
+        },
+        {
+          id: 2,
+          title: "React.js",
+          description:
+            "Proficient in hooks, state management, and component-based architecture.",
+          icon: "fa-brands fa-react",
+          color: "text-blue-400",
+        },
+        {
+          id: 3,
+          title: "Node.js",
+          description:
+            "Backend development using Express, REST APIs, and MongoDB.",
+          icon: "fa-brands fa-node-js",
+          color: "text-green-400",
+        },
+        {
+          id: 4,
+          title: "Tailwind CSS",
+          description: "Rapid UI development with utility-first CSS framework.",
+          icon: "fa-brands fa-css3-alt",
+          color: "text-cyan-400",
+        },
+        {
+          id: 5,
+          title: "MongoDB",
+          description: "Database design, aggregation, and Mongoose ORM.",
+          icon: "fa-solid fa-database",
+          color: "text-green-500",
+        },
+        {
+          id: 6,
+          title: "Git & GitHub",
+          description:
+            "Version control, branching, and collaborative development.",
+          icon: "fa-brands fa-git-alt",
+          color: "text-red-400",
+        },
+      ];
+
+      // Select the container where skill cards will be inserted
+      const container = document.getElementById("skillsContainer");
+
+      // Generate HTML dynamically using map()
+      container.innerHTML = skillsData
+        .map(
+          (skill) => `
+            <div class="flex flex-col items-center bg-gray-900/80 shadow-lg p-6 rounded-lg text-center">
+                <div class="${skill.color} text-4xl mb-4">
+                    <i class="${skill.icon}"></i>
+                </div>
+                <h3 class="text-xl font-semibold">${skill.title}</h3>
+                <p class="text-gray-400 text-sm">${skill.description}</p>
+            </div>
+        `
+        )
+        .join(""); // `.join("")` removes commas from the generated HTML
+    </script>
+
+    <script
+      src="https://kit.fontawesome.com/your-fontawesome-kit.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

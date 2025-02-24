@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body
+    class="bg-[#010106] text-white flex items-center justify-center min-h-screen p-6"
+  >
+    <section class="py-10 w-full">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Projects</h2>
+        <div
+          id="projectContainer"
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6"
+        >
+          <!-- Project Cards will be inserted here dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Project data array
+      const projects = [
+        {
+          title: "Task Management System",
+          description:
+            "Created simple full stack website task management system with the help of React and Nodejs. ✌️",
+          demoLink: "https://mytaskmanagement.netlify.app/",
+          githubLink: "https://github.com/prabin012/Task_Management",
+          technologies: [
+            "Frontend: React",
+            "Backend: Nodejs, Express",
+            "Database: MongoDB",
+            "Host: Netlify",
+          ],
+          icon: "fa-solid fa-laptop-code",
+        },
+        {
+          title: "Online Biding website",
+          description:
+            "Developed user-friendly full stack web application where user can buy and sell their products. Developed user-friendly full stack web application where user can buy and sell their products. ✌️",
+          demoLink: "notice.html",
+          githubLink: "https://github.com/prabin012/BidingwebApplication",
+          technologies: [
+            "Frontend: React",
+            "Backend: Nodejs, Express",
+            "Database: MongoDB",
+            "Host: Netlify",
+          ],
+          icon: "fa-solid fa-laptop-code",
+        },
+        {
+          title: "My Restaurant",
+          description:
+            "Developed & designed real-time website for the Restaurant with the help of React and Nodejs. ✌️",
+          demoLink: "https://hckatiyahouse.netlify.app/",
+          githubLink: "https://github.com/prabin012/HotelCelebration",
+          technologies: [
+            "Frontend: React",
+            "Backend: Nodejs, Express",
+            "Database: MongoDB",
+            "Host: Netlify",
+          ],
+          icon: "fa-solid fa-laptop-code",
+        },
+        {
+          title: "Repository",
+          description:
+            "Repository is full stack web application where user can create their own Portfolio without coding. ✌️",
+          demoLink: "https://myportofolios.netlify.app/",
+          githubLink: "https://github.com/prabin012/my_portfolio",
+          technologies: [
+            "Frontend: React",
+            "Backend: Nodejs, Express",
+            "Database: MongoDB",
+            "Host: Netlify",
+          ],
+          icon: "fa-solid fa-laptop-code",
+        },
+        {
+          title: "Doctor Appointment System",
+          description:
+            "Developed user-friendly full stack web application Doctor appointment system using PHP Laravel✌️",
+          demoLink: "notice.html",
+          githubLink: "https://github.com/prabin012/DoctorAppointmentLaravel",
+          technologies: [
+            "Frontend: HTML, CSS, JS",
+            "Backend: PHP, Repojectory",
+            "Database: MySQL",
+          ],
+          icon: "fa-solid fa-laptop-code",
+        },
+        {
+          title: "Flight Management System",
+          description:
+            "Created simple flight management system with the help of Java and MySQL✌️",
+          demoLink: "notice.html",
+          githubLink:
+            "https://github.com/prabin012/FlightManagementSystem-using-Java",
+          technologies: ["Java", "Apache", "MySQL"],
+          icon: "fa-solid fa-laptop-code",
+        },
+      ];
+
+      // Function to generate project cards dynamically
+      const projectContainer = document.getElementById("projectContainer");
+
+      projects.forEach((project) => {
+        const projectCard = document.createElement("div");
+        projectCard.classList.add(
+          "flex",
+          "flex-col",
+          "items-center",
+          "bg-gray-900/80",
+          "shadow-lg",
+          "p-6",
+          "rounded-lg",
+          "text-center"
+        );
+
+        projectCard.innerHTML = `
+    <div class="flex justify-between items-center"> 
+  <div class="flex flex-col w-1/2 text-left">
+    <h3 class="text-xl font-semibold">${project.title}</h3>
+    <p class="text-gray-400 text-sm">${project.description}</p>
+    <div class="mt-5">
+      <a href="${
+        project.demoLink
+      }" target="_blank" class="projectdemo bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md">Demo</a>
+      <a href="${
+        project.githubLink
+      }" target="_blank" class="ml-3 text-gray-400 hover:text-blue-500">
+        <i class="fab fa-github text-2xl"></i>
+      </a>
+    </div>
+  </div>
+ <div class="border-l-2 border-gray-400 h-full mx-4"></div>
+
+  <div class="mt-5 text-gray-400 text-sm">
+    <div class="${project.icon} text-4xl mb-3 text-blue-500"></div>
+    <span class="block font-semibold">Technologies used:</span>
+    <ul class="flex justify-start flex-col items-start text-left">
+      ${project.technologies.map((tech) => `<li>☑️ ${tech}</li>`).join("")}
+    </ul>
+  </div>
+</div>
+
+  `;
+
+        projectContainer.appendChild(projectCard);
+      });
+    </script>
+  </body>
+</html>

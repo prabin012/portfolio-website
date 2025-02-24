@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Education Section</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body
+    class="bg-[#010106] text-white flex items-center justify-center min-h-screen p-6"
+  >
+    <section id="Education" class="py-10 w-full">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Education & Studies</h2>
+        <div id="educationContainer" class="space-y-6">
+          <!-- Education Cards will be inserted here dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Dummy Education Data
+      const educationData = [
+        {
+          id: 1,
+          name: "Jain Deemed-to-be University",
+          location: "Bengaluru, Karnataka, India",
+          degree: "B. Tech - Information Science and Engineering",
+          years: "2020 - 2024",
+          icon: "fa-solid fa-graduation-cap",
+          color: "text-yellow-400",
+        },
+        {
+          id: 2,
+          name: "Nasa National Secondary School",
+          location: "Tinkunee, Kathmandu, Nepal",
+          degree: "+2 National Examination Board (NEB)",
+          years: "2018 - 2020",
+          icon: "fa-solid fa-building-columns",
+          color: "text-blue-400",
+        },
+        {
+          id: 3,
+          name: "Shree Ram Secondary School",
+          location: "Matihani, Mahottari, Nepal",
+          degree: "1-10 Secondary Education Examination (SEE)",
+          years: "2008 - 2018",
+          icon: "fa-solid fa-school",
+          color: "text-green-400",
+        },
+      ];
+
+      // Select the container where cards will be inserted
+      const container = document.getElementById("educationContainer");
+
+      // Generate HTML dynamically using map()
+      container.innerHTML = educationData
+        .map(
+          (edu) => `
+            <div class="flex items-center bg-gray-900/80 shadow-lg p-6 rounded-lg">
+                <div class="${edu.color} text-3xl mr-4">
+                    <i class="${edu.icon}"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold">${edu.name}</h3>
+                    <p class="text-gray-300">${edu.location}</p>
+                    <p class="text-gray-400">${edu.degree}</p>
+                    <p class="text-sm text-gray-500">${edu.years}</p>
+                </div>
+            </div>
+        `
+        )
+        .join(""); // `.join("")` is used to remove commas from the generated HTML
+    </script>
+
+    <script
+      src="https://kit.fontawesome.com/your-fontawesome-kit.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      /* Add smooth fade-in animation */
+      .fade-in {
+        animation: fadeIn 2s ease-in-out;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-[#010106] text-white font-sans">
+    <div class="min-h-screen flex items-center justify-center px-6 py-12">
+      <div
+        class="max-w-4xl w-full bg-[#1A202C] bg-opacity-80 rounded-lg shadow-2xl overflow-hidden p-8 text-center fade-in"
+      >
+        <div class="relative">
+          <img
+            src="image/p10.jpg"
+            alt="Prabin Kumar Mahato"
+            class="w-40 h-40 rounded-full border-4 object-cover object-fit border-indigo-600 mx-auto mb-6"
+          />
+          <h1 class="text-4xl font-bold mb-4 text-indigo-400">
+            Welcome to My Portfolio
+          </h1>
+          <p class="text-lg text-gray-300 mb-6">
+            Hello, I'm
+            <span class="text-indigo-300 font-semibold"
+              >Prabin Kumar Mahato</span
+            >, a passionate Full Stack Developer who loves coding.
+          </p>
+
+          <p class="text-xl text-gray-200 mb-6">
+            I specialize in creating dynamic web applications that solve
+            real-world problems with elegant solutions. Let's collaborate and
+            bring ideas to life.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="mt-8 flex justify-center gap-6">
+            <button
+              class="bg-indigo-600 hover:bg-indigo-700 text-white py-3 px-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 ease-in-out"
+            >
+              <a href="https://github.com/prabin012" target="_blank">GitHub</a>
+            </button>
+            <button
+              class="bg-pink-600 hover:bg-pink-700 text-white py-3 px-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 ease-in-out"
+            >
+              <a href="./image/React_CV_Prabin_KTM_Updated.pdf" download
+                >Download Resume</a
+              >
+            </button>
+          </div>
+
+          <!-- Social Icons -->
+          <div class="mt-6 flex justify-center gap-6 text-2xl text-gray-200">
+            <a
+              href="https://github.com/prabin012"
+              target="_blank"
+              class="hover:text-white"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/iprabin/"
+              target="_blank"
+              class="text-blue-500 hover:text-white"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/i_prabin01/"
+              target="_blank"
+              class="text-red-400 hover:text-white"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a
+              href="tel:+977-9808676092"
+              class="text-green-500 hover:text-white"
+            >
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
