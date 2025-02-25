@@ -8,34 +8,59 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
-      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     />
+    <style>
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        width: 2px;
+        background: linear-gradient(to bottom, #3b82f6, #8b5cf6, #ec4899);
+        height: 100%;
+        transform: translateX(-50%);
+      }
+      .education-card:hover .icon-container {
+        transform: rotate(15deg) scale(1.1);
+      }
+    </style>
   </head>
-  <body
-    class="bg-[#010106] text-white flex items-center justify-center min-h-screen p-6"
-  >
-    <section id="Education" class="py-10 w-full">
-      <div class="max-w-7xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center mb-8">Education & Studies</h2>
-        <div id="educationContainer" class="space-y-6">
-          <!-- Education Cards will be inserted here dynamically -->
+  <body class="bg-[#010106] text-white">
+    <section id="Education" class="py-20 px-4">
+      <div class="max-w-7xl mx-auto">
+        <h2
+          class="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
+        >
+          Academic Journey
+        </h2>
+
+        <div class="relative timeline">
+          <div id="educationContainer" class="relative space-y-16">
+            <!-- Education cards will be inserted here -->
+          </div>
         </div>
       </div>
     </section>
 
     <script>
-      // Dummy Education Data
       const educationData = [
         {
           id: 1,
           name: "Jain Deemed-to-be University",
           location: "Bengaluru, Karnataka, India",
-          degree: "B. Tech - Information Science and Engineering",
+          degree: "B.Tech - Information Science and Engineering",
           years: "2020 - 2024",
-          icon: "fa-solid fa-graduation-cap",
-          color: "text-yellow-400",
+          icon: "fa-graduation-cap",
+          color: "from-yellow-400 to-amber-500",
         },
         {
           id: 2,
@@ -43,8 +68,8 @@
           location: "Tinkunee, Kathmandu, Nepal",
           degree: "+2 National Examination Board (NEB)",
           years: "2018 - 2020",
-          icon: "fa-solid fa-building-columns",
-          color: "text-blue-400",
+          icon: "fa-building-columns",
+          color: "from-blue-400 to-cyan-500",
         },
         {
           id: 3,
@@ -52,37 +77,52 @@
           location: "Matihani, Mahottari, Nepal",
           degree: "1-10 Secondary Education Examination (SEE)",
           years: "2008 - 2018",
-          icon: "fa-solid fa-school",
-          color: "text-green-400",
+          icon: "fa-school",
+          color: "from-green-400 to-emerald-500",
         },
       ];
 
-      // Select the container where cards will be inserted
       const container = document.getElementById("educationContainer");
 
-      // Generate HTML dynamically using map()
       container.innerHTML = educationData
         .map(
-          (edu) => `
-            <div class="flex items-center bg-gray-900/80 shadow-lg p-6 rounded-lg">
-                <div class="${edu.color} text-3xl mr-4">
-                    <i class="${edu.icon}"></i>
-                </div>
-                <div>
-                    <h3 class="text-xl font-semibold">${edu.name}</h3>
-                    <p class="text-gray-300">${edu.location}</p>
-                    <p class="text-gray-400">${edu.degree}</p>
-                    <p class="text-sm text-gray-500">${edu.years}</p>
-                </div>
+          (edu, index) => `
+        <div class="education-card relative w-full md:w-1/2 ${
+          index % 2 === 0 ? "md:ml-auto md:pr-16" : "md:mr-auto md:pl-16"
+        } 
+            group transition-all duration-500 hover:scale-[1.02]">
+          <div class="flex flex-col md:flex-row items-center gap-6 p-8 bg-gray-900/70 backdrop-blur-sm 
+              rounded-2xl border border-gray-800 hover:border-purple-500/30 shadow-xl">
+            <div class="icon-container transition-transform duration-300">
+              <div class="p-5 bg-gradient-to-br ${edu.color} rounded-2xl">
+                <i class="fa-solid ${edu.icon} text-3xl text-white"></i>
+              </div>
             </div>
-        `
+            <div class="flex-1">
+              <h3 class="text-2xl font-bold mb-2">${edu.name}</h3>
+              <p class="text-gray-300 mb-3 flex items-center gap-2">
+                <i class="fas fa-map-marker-alt text-sm text-purple-400"></i>
+                ${edu.location}
+              </p>
+              <p class="text-gray-400 mb-3">${edu.degree}</p>
+              <div class="flex items-center gap-2 text-blue-300">
+                <i class="fas fa-clock"></i>
+                <span class="text-sm font-mono">${edu.years}</span>
+              </div>
+            </div>
+          </div>
+          ${
+            index < educationData.length - 1
+              ? `
+          <div class="absolute top-full left-1/2 -translate-x-1/2 w-1 h-16 
+              bg-gradient-to-b from-purple-500/30 to-transparent md:hidden"></div>
+          `
+              : ""
+          }
+        </div>
+      `
         )
-        .join(""); // `.join("")` is used to remove commas from the generated HTML
+        .join("");
     </script>
-
-    <script
-      src="https://kit.fontawesome.com/your-fontawesome-kit.js"
-      crossorigin="anonymous"
-    ></script>
   </body>
 </html>

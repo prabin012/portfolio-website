@@ -44,74 +44,73 @@
     ></script>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
   </head>
-  <body class="bg-[#010106]">
+  <body class="bg-[#010106]  ">
     <!-- Navbar -->
-    <div class=""       id="home">
-      <div class="flex items-center justify-between p-4 bg-[#010106]">
-        <!-- Logo -->
-        <div class="logo flex items-center">
-          <img src="./image/li1.png" alt="Logo" class="logoImage w-12 h-12" />
-        </div>
+   <nav class=" w-full bg-[#010106] backdrop-blur-md border-b border-gray-800 z-50 ">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <!-- Logo -->
+            <div class="flex-shrink-0 flex items-center">
+                <span class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                    Prabin
+                </span>
+            </div>
 
-        <!-- Navbar Menu -->
-        <div class="menu hidden md:flex space-x-8">
-          <li class="px-4 list-none">
-            <a class="active text-decoration-none text-white hover:text-white" href="#home"
-              >Home</a
-            >
-          </li>
-          <li class="list-none px-4 no-underline">
-            <a class="text-white text-decoration-none hover:text-white" href="#about">About</a>
-          </li>
-          <li class="list-none px-4">
-            <a class="text-white text-decoration-none hover:text-white" href="#skills">Skills</a>
-          </li>
-          <li class="list-none px-4">
-            <a class="text-white text-decoration-none hover:text-white" href="#projects">Projects</a>
-          </li>
-          <li class="list-none px-4">
-            <a class="text-white text-decoration-none hover:text-white" href="#imageGradess"
-              >Certificates</a
-            >
-          </li>
-          <li class="list-none px-4">
-            <a class="text-white text-decoration-none hover:text-white" href="#contact"
-              >Contact</a
-            >
-          </li>
-        </div>
+            <!-- Desktop Menu -->
+            <div class="hidden md:block">
+                <div class="flex space-x-8">
+                    <a href="#home" class="nav-link text-white hover:text-white px-3 py-2 rounded-md transition-all duration-300">
+                        Home
+                    </a>
+                    <a href="#about" class="nav-link text-white hover:text-white px-3 py-2 rounded-md transition-all duration-300">
+                        About
+                    </a>
+                    <a href="#skills" class="nav-link text-white hover:text-white px-3 py-2 rounded-md transition-all duration-300">
+                        Skills
+                    </a>
+                    <a href="#projects" class="nav-link text-white hover:text-white px-3 py-2 rounded-md transition-all duration-300">
+                        Projects
+                    </a>
+                    <a href="#certificates" class="nav-link text-white hover:text-white px-3 py-2 rounded-md transition-all duration-300">
+                        Certificates
+                    </a>
+                    <a href="#contact" class="nav-link text-white hover:text-white px-3 py-2 rounded-md transition-all duration-300">
+                        Contact
+                    </a>
+                </div>
+            </div>
 
-        <!-- Hamburger Icon for Mobile View -->
-        <div class="nav-ic md:hidden">
-          <i id="nav" class="fa-solid fa-bars text-2xl cursor-pointer"></i>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
+                    <svg class="h-8 w-8 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
         </div>
-      </div>
-
-      <!-- Mobile Menu -->
-      <div id="mobileMenu" class="hidden bg-[#010106] p-4 space-y-4">
-        <li class="navbarmenuItems">
-          <a class="active text-gray-300 hover:text-white" href="#home">Home</a>
-        </li>
-        <li class="navbarmenuItems">
-          <a class="text-gray-300 hover:text-white" href="#about">About</a>
-        </li>
-        <li class="navbarmenuItems">
-          <a class="text-gray-300 hover:text-white" href="#blog">Skills</a>
-        </li>
-        <li class="navbarmenuItems">
-          <a class="text-gray-300 hover:text-white" href="#imageGradess"
-            >Certificates</a
-          >
-        </li>
-        <li class="navbarmenuItems">
-          <a class="text-gray-300 hover:text-white" href="#contact">Contact</a>
-        </li>
-        <i
-          id="close"
-          class="fa-solid fa-close text-2xl cursor-pointer text-gray-300 hover:text-white"
-        ></i>
-      </div>
     </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden bg-[#010106] fixed inset-0 bg-[#010106]/95 backdrop-blur-xl transform translate-x-full transition-transform duration-300">
+        <div class="flex flex-col items-end  py-4">
+            <button id="close-menu-btn" class="self-end text-gray-300 hover:text-white mb-8">
+                <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            
+            <nav class="w-full px-4  text-right bg-[#010106]">
+                <a href="#home" class="block text-2xl text-gray-300 hover:text-white py-3  transition-all duration-300">Home</a>
+                <a href="#about" class="block text-2xl text-gray-300 hover:text-white py-3 transition-all duration-300">About</a>
+                <a href="#skills" class="block text-2xl text-gray-300 hover:text-white py-3 transition-all duration-300">Skills</a>
+                <a href="#projects" class="block text-2xl text-gray-300 hover:text-white py-3 transition-all duration-300">Projects</a>
+                <a href="#certificates" class="block text-2xl text-gray-300 hover:text-white py-3 transition-all duration-300">Certificates</a>
+                <a href="#contact" class="block text-2xl text-gray-300 hover:text-white py-3 transition-all duration-300">Contact</a>
+            </nav>
+        </div>
+    </div>
+</nav>
 
     <!-- Welcome Section -->
     <iframe
@@ -121,6 +120,7 @@
       style="border: none"
 
     ></iframe>
+   
 
     <!-- About Section -->
     <iframe
@@ -135,7 +135,7 @@
     <iframe
       src="education.html"
       width="100%"
-      height="800px"
+      height="1000px"
       style="border: none"
        id="education"
     ></iframe>
@@ -144,7 +144,7 @@
     <iframe
       src="skills.html"
       width="100%"
-      height="600px"
+      height="1500px"
       style="border: none"
        id="skills"
     ></iframe>
@@ -168,33 +168,96 @@
  <iframe
       src="navbar.html"
       width="100%"
-      height="1950px"
+      height="1250px"
       style="border: none"
       id="imageGradess"
     ></iframe>
 
     <!-- Contact Section -->
     <iframe
+      src="worked.html"
+      width="100%"
+      height="800px"
+      style="border: none"
+      id="contact"
+    ></iframe>
+    <iframe
       src="contact.html"
       width="100%"
-      height="1000px"
+      height="1100px"
       style="border: none"
       id="contact"
     ></iframe>
 
     <!-- Footer -->
-    <footer class="footer">
-      <div class="footerContainer">
-        <h1>
-          Copyright <i class="fa-regular fa-copyright"></i> | 2023
-          prabinmahato.com.np
-        </h1>
+   <footer class="bg-[#010106] text-gray-300 py-3  relative">
+  <div class="max-w-7xl mx-auto border-t border-gray-800  px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 py-6 pt-12 md:grid-cols-4 gap-8">
+      <!-- About Section -->
+      <div class="space-y-4">
+        <h3 class="text-white text-xl font-bold mb-4">Prabin Mahato</h3>
+        <p class="text-sm">Full Stack Developer specializing in modern web technologies and innovative solutions.</p>
       </div>
 
-      <div class="fixed bottom-10 right-10">
-        <a href="#home" class="uoers"><span class="uoers">⬆️</span></a>
+      <!-- Quick Links -->
+      <div class="space-y-4">
+        <h4 class="text-white text-lg font-semibold mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="#home" class="hover:text-blue-400 transition-colors">Home</a></li>
+          <li><a href="#projects" class="hover:text-blue-400 transition-colors">Projects</a></li>
+          <li><a href="#skills" class="hover:text-blue-400 transition-colors">Skills</a></li>
+          <li><a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a></li>
+        </ul>
       </div>
-    </footer>
+
+      <!-- Contact Info -->
+      <div class="space-y-4">
+        <h4 class="text-white text-lg font-semibold mb-4">Connect</h4>
+        <div class="space-y-2">
+          <p class="flex items-center gap-2">
+            <i class="fas fa-envelope text-blue-400"></i>
+            prabinmahato415@gmail.com
+          </p>
+          <p class="flex items-center gap-2">
+            <i class="fas fa-phone-alt text-blue-400"></i>
+            +977 9808676092
+          </p>
+        </div>
+      </div>
+
+      <!-- Social Media -->
+      <div class="space-y-4">
+        <h4 class="text-white text-lg font-semibold mb-4">Follow Me</h4>
+        <div class="flex space-x-4">
+          <a href="https://github.com/prabin012" target="_blank" class="p-2 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors">
+            <i class="fab fa-github text-xl"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/iprabin/" target="_blank" class="p-2 rounded-full bg-gray-800 hover:bg-blue-600 transition-colors">
+            <i class="fab fa-linkedin-in text-xl"></i>
+          </a>
+          <a href="https://www.facebook.com/kumarprabinsp" target="_blank" class="p-2 rounded-full bg-gray-800 hover:bg-blue-500 transition-colors">
+            <i class="fab fa-facebook-f text-xl"></i>
+          </a>
+          <a href="https://www.instagram.com/i_prabin01/" target="_blank" class="p-2 rounded-full bg-gray-800 hover:bg-pink-600 transition-colors">
+            <i class="fab fa-instagram text-xl"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright Section -->
+    <div class="border-t border-gray-800 py-6 text-center">
+      <p class="text-sm text-gray-500">
+        <i class="far fa-copyright"></i> 2023 prabinmahato.com.np | All rights reserved
+      </p>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <a href="#home" class="fixed bottom-8 right-8 p-3 bg-blue-600 hover:bg-blue-700 rounded-full shadow-lg transition-all duration-300 group">
+    <i class="fas fa-arrow-up text-white group-hover:-translate-y-1 transition-transform"></i>
+  </a>
+</footer>
 
     <script src="index.js"></script>
     <script
@@ -208,6 +271,55 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const closeMenuBtn = document.getElementById('close-menu-btn');
+    const mobileMenus = document.getElementById('mobile-menu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenus.classList.replace('translate-x-full', 'translate-x-0');
+    });
+
+    closeMenuBtn.addEventListener('click', () => {
+        mobileMenus.classList.replace('translate-x-0', 'translate-x-full');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!mobileMenus.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+            mobileMenus.classList.replace('translate-x-0', 'translate-x-full');
+        }
+    });
+
+    // Active link highlighting
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+            // Remove active class from all links
+            document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+            // Add active class to clicked link
+            this.classList.add('active');
+            // Close mobile menu
+            mobileMenus.classList.replace('translate-x-0', 'translate-x-full');
+        });
+    });
+
+    // Scroll listener for active state
+    window.addEventListener('scroll', () => {
+        document.querySelectorAll('section').forEach(section => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top <= 100 && rect.bottom >= 100) {
+                const id = section.getAttribute('id');
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${id}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    });
+</script>
     <script>
       function sendEmail() {
         Email.send({
