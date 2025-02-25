@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Prabin Kumar</title>
     <link rel="icon" href="image/logo2.jpg" />
+    <link rel="stylesheet" href="style.css">
     <!-- Google tag (gtag.js) -->
     <script
       async
@@ -44,74 +45,70 @@
     ></script>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
   </head>
-  <body class="bg-[#010106]">
+  <body class="bg-[#010106]  ">
     <!-- Navbar -->
-    <div class=""       id="home">
-      <div class="flex items-center justify-between p-4 bg-[#010106]">
-        <!-- Logo -->
-        <div class="logo flex items-center">
-          <img src="./image/li1.png" alt="Logo" class="logoImage w-12 h-12" />
-        </div>
+   <nav class=" w-full bg-[#010106] backdrop-blur-md border-b  border-gray-800 z-50 ">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+        <div class="flex items-center justify-between h-16">
+            <!-- Logo -->
+            <div class="flex-shrink-0 flex items-center">
+                <span class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                    Prabin
+                </span>
+            </div>
 
-        <!-- Navbar Menu -->
-        <div class="menu hidden md:flex space-x-8">
-          <li class="px-4 list-none">
-            <a class="active text-decoration-none text-white hover:text-white" href="#home"
-              >Home</a
-            >
-          </li>
-          <li class="list-none px-4 no-underline">
-            <a class="text-white text-decoration-none hover:text-white" href="#about">About</a>
-          </li>
-          <li class="list-none px-4">
-            <a class="text-white text-decoration-none hover:text-white" href="#skills">Skills</a>
-          </li>
-          <li class="list-none px-4">
-            <a class="text-white text-decoration-none hover:text-white" href="#projects">Projects</a>
-          </li>
-          <li class="list-none px-4">
-            <a class="text-white text-decoration-none hover:text-white" href="#imageGradess"
-              >Certificates</a
-            >
-          </li>
-          <li class="list-none px-4">
-            <a class="text-white text-decoration-none hover:text-white" href="#contact"
-              >Contact</a
-            >
-          </li>
-        </div>
+            <!-- Desktop Menu -->
+            <div class="hidden md:block">
+                <div class="flex space-x-8">
+                    <a href="#home" class="nav-link text-white hover:text-white px-3 py-2 rounded-md transition-all duration-300">
+                        Home
+                    </a>
+                    <a href="#about" class="nav-link text-white hover:text-white px-3 py-2 rounded-md transition-all duration-300">
+                        About
+                    </a>
+                    <a href="#skills" class="nav-link text-white hover:text-white px-3 py-2 rounded-md transition-all duration-300">
+                        Skills
+                    </a>
+                    <a href="#projects" class="nav-link text-white hover:text-white px-3 py-2 rounded-md transition-all duration-300">
+                        Projects
+                    </a>
+                    <a href="#certificates" class="nav-link text-white hover:text-white px-3 py-2 rounded-md transition-all duration-300">
+                        Certificates
+                    </a>
+                    <a href="#contact" class="nav-link text-white hover:text-white px-3 py-2 rounded-md transition-all duration-300">
+                        Contact
+                    </a>
+                </div>
+            </div>
 
-        <!-- Hamburger Icon for Mobile View -->
-        <div class="nav-ic md:hidden">
-          <i id="nav" class="fa-solid fa-bars text-2xl cursor-pointer"></i>
-        </div>
-      </div>
+         <!-- Mobile Menu Button -->
+<div class="md:hidden">
+    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
+        <svg class="h-8 w-8 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+    </button>
+</div>
 
-      <!-- Mobile Menu -->
-      <div id="mobileMenu" class="hidden bg-[#010106] p-4 space-y-4">
-        <li class="navbarmenuItems">
-          <a class="active text-gray-300 hover:text-white" href="#home">Home</a>
-        </li>
-        <li class="navbarmenuItems">
-          <a class="text-gray-300 hover:text-white" href="#about">About</a>
-        </li>
-        <li class="navbarmenuItems">
-          <a class="text-gray-300 hover:text-white" href="#blog">Skills</a>
-        </li>
-        <li class="navbarmenuItems">
-          <a class="text-gray-300 hover:text-white" href="#imageGradess"
-            >Certificates</a
-          >
-        </li>
-        <li class="navbarmenuItems">
-          <a class="text-gray-300 hover:text-white" href="#contact">Contact</a>
-        </li>
-        <i
-          id="close"
-          class="fa-solid fa-close text-2xl cursor-pointer text-gray-300 hover:text-white"
-        ></i>
-      </div>
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="md:hidden fixed inset-0 bg-[#010106]/95 backdrop-blur-xl transform -translate-x-full transition-transform duration-300 z-50">
+    <div class="flex flex-col items-end p-6 h-full">
+        <button id="close-menu-btn" class="self-end text-gray-300 hover:text-white mb-8">
+            <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <nav class="w-full px-4 text-right space-y-6">
+            <a href="#home" class="block text-2xl text-gray-300 hover:text-white py-3 transition-all">Home</a>
+            <a href="#about" class="block text-2xl text-gray-300 hover:text-white py-3 transition-all">About</a>
+            <a href="#skills" class="block text-2xl text-gray-300 hover:text-white py-3 transition-all">Skills</a>
+            <a href="#projects" class="block text-2xl text-gray-300 hover:text-white py-3 transition-all">Projects</a>
+            <a href="#certificates" class="block text-2xl text-gray-300 hover:text-white py-3 transition-all">Certificates</a>
+            <a href="#contact" class="block text-2xl text-gray-300 hover:text-white py-3 transition-all">Contact</a>
+        </nav>
     </div>
+</div>
+</nav>
 
     <!-- Welcome Section -->
     <iframe
@@ -121,6 +118,7 @@
       style="border: none"
 
     ></iframe>
+   
 
     <!-- About Section -->
     <iframe
@@ -132,69 +130,953 @@
     ></iframe>
 
     <!-- Education Section -->
-    <iframe
-      src="education.html"
-      width="100%"
-      height="800px"
-      style="border: none"
-       id="education"
-    ></iframe>
+    <!-- <iframe
+     src="education.html"
+    class="w-full min-h-screen"
+    style="border: none"
+    id="education"
+    ></iframe> -->
+     <div class="bg-[#010106] text-white" id="education">
+    <section id="Education" class="py-20 px-4">
+      <div class="max-w-7xl mx-auto">
+        <h2
+          class="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
+        >
+          Academic Journey
+        </h2>
 
-    <!-- Skills Section -->
-    <iframe
-      src="skills.html"
-      width="100%"
-      height="600px"
-      style="border: none"
-       id="skills"
-    ></iframe>
+        <div class="relative timeline">
+          <div id="educationContainer" class="relative space-y-16">
+            <!-- Education cards will be inserted here -->
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- Project Section -->
-    <iframe
-      src="project.html"
-      width="100%"
-      height="1000px"
-      style="border: none"
-       id="projects"
-    ></iframe>
+    <script>
+      const educationData = [
+        {
+          id: 1,
+          name: "Jain Deemed-to-be University",
+          location: "Bengaluru, Karnataka, India",
+          degree: "B.Tech - Information Science and Engineering",
+          years: "2020 - 2024",
+          icon: "fa-graduation-cap",
+          color: "from-yellow-400 to-amber-500",
+        },
+        {
+          id: 2,
+          name: "Nasa National Secondary School",
+          location: "Tinkunee, Kathmandu, Nepal",
+          degree: "+2 National Examination Board (NEB)",
+          years: "2018 - 2020",
+          icon: "fa-building-columns",
+          color: "from-blue-400 to-cyan-500",
+        },
+        {
+          id: 3,
+          name: "Shree Ram Secondary School",
+          location: "Matihani, Mahottari, Nepal",
+          degree: "1-10 Secondary Education Examination (SEE)",
+          years: "2008 - 2018",
+          icon: "fa-school",
+          color: "from-green-400 to-emerald-500",
+        },
+      ];
 
-    <!-- Research Section -->
-    <iframe
-      src="research.html"
-      width="100%"
-      height="1300px"
-      style="border: none"
-    ></iframe>
- <iframe
-      src="navbar.html"
-      width="100%"
-      height="1950px"
-      style="border: none"
-      id="imageGradess"
-    ></iframe>
+      const container = document.getElementById("educationContainer");
 
-    <!-- Contact Section -->
+      container.innerHTML = educationData
+        .map(
+          (edu, index) => `
+        <div class="education-card relative w-full md:w-1/2 ${
+          index % 2 === 0 ? "md:ml-auto md:pr-16" : "md:mr-auto md:pl-16"
+        } 
+            group transition-all duration-500 hover:scale-[1.02]">
+          <div class="flex flex-col md:flex-row items-center gap-6 p-8 bg-gray-900/70 backdrop-blur-sm 
+              rounded-2xl border border-gray-800 hover:border-purple-500/30 shadow-xl">
+            <div class="icon-container transition-transform duration-300">
+              <div class="p-5 bg-gradient-to-br ${edu.color} rounded-2xl">
+                <i class="fa-solid ${edu.icon} text-3xl text-white"></i>
+              </div>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-2xl font-bold mb-2">${edu.name}</h3>
+              <p class="text-gray-300 mb-3 flex items-center gap-2">
+                <i class="fas fa-map-marker-alt text-sm text-purple-400"></i>
+                ${edu.location}
+              </p>
+              <p class="text-gray-400 mb-3">${edu.degree}</p>
+              <div class="flex items-center gap-2 text-blue-300">
+                <i class="fas fa-clock"></i>
+                <span class="text-sm font-mono">${edu.years}</span>
+              </div>
+            </div>
+          </div>
+          ${
+            index < educationData.length - 1
+              ? `
+          <div class="absolute top-full left-1/2 -translate-x-1/2 w-1 h-16 
+              bg-gradient-to-b from-purple-500/30 to-transparent md:hidden"></div>
+          `
+              : ""
+          }
+        </div>
+      `
+        )
+        .join("");
+    </script>
+  </div>
+
+   
+    <div class="bg-[#010106] text-white" id="skills">
+    <section class="py-20 px-4">
+      <div class="max-w-7xl mx-auto">
+        <h2
+          class="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent"
+        >
+          Technical Skills & Applications
+        </h2>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          id="skillsContainer"
+        >
+          <!-- Skills will be dynamically generated here -->
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const skillsData = [
+        {
+          title: "JavaScript",
+          icon: "fa-brands fa-js",
+          color: "from-yellow-400 to-amber-500",
+          features: [
+            "ES6+ Syntax",
+            "Async/Await",
+            "DOM Manipulation",
+            "API Integration",
+          ],
+          applications: ["Web Apps", "SPAs", "Browser Extensions"],
+          proficiency: 90,
+        },
+        {
+          title: "React.js",
+          icon: "fa-brands fa-react",
+          color: "from-blue-400 to-cyan-500",
+          features: [
+            "Hooks",
+            "Context API",
+            "React Router",
+            "Component Library",
+          ],
+          applications: ["Dashboards", "E-commerce", "Real-Time Apps"],
+          proficiency: 85,
+        },
+        {
+          title: "Node.js",
+          icon: "fa-brands fa-node-js",
+          color: "from-green-400 to-emerald-500",
+          features: ["REST APIs", "Express.js", "JWT Auth", "Web Sockets"],
+          applications: ["Backend Services", "CLI Tools", "Microservices"],
+          proficiency: 80,
+        },
+        {
+          title: "MongoDB",
+          icon: "fa-solid fa-database",
+          color: "from-green-500 to-lime-400",
+          features: [
+            "Schema Design",
+            "Aggregation",
+            "Indexing",
+            "Mongoose ORM",
+          ],
+          applications: ["User Data", "Analytics", "Content Management"],
+          proficiency: 75,
+        },
+        {
+          title: "Git & GitHub",
+          icon: "fa-brands fa-git-alt",
+          color: "from-red-400 to-orange-500",
+          features: ["Version Control", "CI/CD", "Branching", "Code Reviews"],
+          applications: [
+            "Team Collaboration",
+            "Open Source",
+            "Workflow Automation",
+          ],
+          proficiency: 85,
+        },
+        {
+          title: "Python",
+          icon: "fa-brands fa-python",
+          color: "from-blue-600 to-sky-400",
+          features: ["Data Analysis", "Automation", "Web Scraping", "Flask"],
+          applications: ["Scripting", "Machine Learning", "APIs"],
+          proficiency: 70,
+        },
+      ];
+
+      const container = document.getElementById("skillsContainer");
+
+      skillsData.forEach((skill) => {
+        const card = document.createElement("div");
+        card.className = `skill-card group relative p-8 bg-gray-900/50 backdrop-blur-sm rounded-2xl border border-gray-800 hover:border-${
+          skill.color.split("-")[1]
+        }-500/50 transition-all duration-300`;
+        card.innerHTML = `
+                <div class="absolute inset-0 bg-${
+                  skill.color.split("-")[1]
+                }-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-16 h-16 bg-gradient-to-br ${
+                      skill.color
+                    } rounded-xl flex items-center justify-center">
+                        <i class="${skill.icon} text-3xl text-white"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold">${skill.title}</h3>
+                        <p class="text-gray-400 text-sm">${skill.applications.join(
+                          ", "
+                        )}</p>
+                    </div>
+                </div>
+
+                <div class="feature-list space-y-4 mb-6">
+                    <h4 class="text-sm font-semibold text-${
+                      skill.color.split("-")[1]
+                    }-400 mb-2">Key Features:</h4>
+                    <ul class="space-y-3">
+                        ${skill.features
+                          .map(
+                            (feature) => `
+                            <li class="feature-item transition-all duration-300">
+                                <div class="flex items-center gap-3">
+                                    <div class="feature-indicator w-2 h-2 bg-${
+                                      skill.color.split("-")[1]
+                                    }-400 rounded-full transition-transform"></div>
+                                    <span class="text-gray-300">${feature}</span>
+                                </div>
+                            </li>
+                        `
+                          )
+                          .join("")}
+                    </ul>
+                </div>
+
+                <div class="mt-auto pt-4 border-t border-gray-800">
+                    <div class="flex justify-between text-sm text-gray-400 mb-2">
+                        <span>Proficiency:</span>
+                        <span>${skill.proficiency}%</span>
+                    </div>
+                    <div class="h-2 bg-gray-800 rounded-full overflow-hidden">
+                        <div class="progress-bar h-full rounded-full bg-gradient-to-r ${
+                          skill.color
+                        }" style="width: ${skill.proficiency}%"></div>
+                    </div>
+                </div>
+            `;
+        container.appendChild(card);
+      });
+    </script>
+  </div>
+
+  
+     <div class="bg-[#010106] text-white min-h-screen" id="projects">
+    <section class="py-20 px-4">
+      <div class="max-w-7xl mx-auto">
+        <h2
+          class="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent"
+        >
+          Featured Projects
+        </h2>
+
+        <div
+          id="projectContainer"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const projects = [
+        {
+          title: "Task Management System",
+          description:
+            "Full stack task management system with React and Node.js featuring real-time updates and user authentication.",
+          demoLink: "https://mytaskmanagement.netlify.app/",
+          githubLink: "https://github.com/prabin012/Task_Management",
+          technologies: ["React", "Node.js", "MongoDB", "JWT Auth"],
+          icon: "fa-solid fa-tasks",
+        },
+        {
+          title: "Online Bidding Platform",
+          description:
+            "User-friendly marketplace for buying and selling products with real-time bidding functionality.",
+          demoLink: "#",
+          githubLink: "https://github.com/prabin012/BidingwebApplication",
+          technologies: ["React", "Express", "WebSocket", "MongoDB"],
+          icon: "fa-solid fa-gavel",
+        },
+        {
+          title: "Restaurant Management",
+          description:
+            "Complete restaurant management system with menu customization and online ordering capabilities.",
+          demoLink: "https://hckatiyahouse.netlify.app/",
+          githubLink: "https://github.com/prabin012/HotelCelebration",
+          technologies: ["React", "Node.js", "Payment Gateway", "MongoDB"],
+          icon: "fa-solid fa-utensils",
+        },
+        {
+          title: "Portfolio Builder",
+          description:
+            "No-code portfolio creation platform with customizable templates and dynamic content management.",
+          demoLink: "https://myportofolios.netlify.app/",
+          githubLink: "https://github.com/prabin012/my_portfolio",
+          technologies: ["React", "Node.js", "PDF Generation", "AWS S3"],
+          icon: "fa-solid fa-id-card",
+        },
+        {
+          title: "Medical Booking System",
+          description:
+            "Full-stack appointment scheduling system for healthcare providers with calendar integration.",
+          demoLink: "#",
+          githubLink: "https://github.com/prabin012/DoctorAppointmentLaravel",
+          technologies: ["Laravel", "MySQL", "FullCalendar", "Twilio"],
+          icon: "fa-solid fa-calendar-check",
+        },
+        {
+          title: "Flight Management",
+          description:
+            "Airline reservation system with ticket booking and management features.",
+          demoLink: "#",
+          githubLink:
+            "https://github.com/prabin012/FlightManagementSystem-using-Java",
+          technologies: ["Java", "Swing", "MySQL", "Jasper Reports"],
+          icon: "fa-solid fa-plane",
+        },
+      ];
+
+      const projectContainer = document.getElementById("projectContainer");
+
+      projects.forEach((project, index) => {
+        const projectCard = document.createElement("div");
+        projectCard.className = `project-card group relative p-8 bg-gray-900/50 backdrop-blur-sm rounded-2xl border border-gray-800 hover:border-purple-500/30 transition-all duration-300`;
+        projectCard.innerHTML = `
+                <div class="absolute inset-0 bg-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                
+                <div class="flex flex-col h-full">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-500 rounded-xl flex items-center justify-center">
+                            <i class="${project.icon} text-4xl text-white"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold mb-2">${
+                              project.title
+                            }</h3>
+                            <div class="flex items-center gap-3">
+                                <a href="${project.demoLink}" target="_blank" 
+                                   class="px-4 py-1 bg-blue-500/20 text-blue-300 rounded-lg hover:bg-blue-500/30 transition-colors 
+                                          ${
+                                            project.demoLink === "#"
+                                              ? "opacity-50 cursor-not-allowed"
+                                              : ""
+                                          }"
+                                   ${
+                                     project.demoLink === "#" ? "disabled" : ""
+                                   }>
+                                    Live Demo
+                                </a>
+                                <a href="${project.githubLink}" target="_blank" 
+                                   class="github-icon px-2 py-1 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors">
+                                    <i class="fab fa-github text-xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-gray-300 mb-6 flex-grow">${
+                      project.description
+                    }</p>
+
+                    <div class="mt-auto pt-4 border-t border-gray-800">
+                        <h4 class="text-sm font-semibold text-purple-400 mb-3">Technology Stack</h4>
+                        <div class="flex flex-wrap gap-3">
+                            ${project.technologies
+                              .map(
+                                (tech) => `
+                                <span class="tech-badge px-3 py-1.5 bg-gray-800 rounded-full text-sm text-gray-300 
+                                            transition-all duration-300 cursor-default">
+                                    ${tech}
+                                </span>
+                            `
+                              )
+                              .join("")}
+                        </div>
+                    </div>
+                </div>
+            `;
+        projectContainer.appendChild(projectCard);
+      });
+    </script>
+  </div>
+
+   
+     <div class="bg-[#010106] text-white" id="Certificates">
+    <section class="py-20 px-4">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-5xl font-bold text-center mb-16 gradient-text">
+          Research & Publications
+        </h2>
+
+        <!-- Research Item 1 -->
+        <div class="research-card mb-16 animate-fadeIn">
+          <div
+            class="flex flex-col lg:flex-row gap-8 items-center bg-gray-900/50 backdrop-blur-sm rounded-3xl p-8 border border-gray-800 hover:border-purple-500/30 transition-all duration-300"
+          >
+            <div
+              class="lg:w-1/2 w-full relative overflow-hidden rounded-2xl group"
+            >
+              <img
+                src="image/r.jpg"
+                alt="Blockchain Voting System"
+                class="research-image w-full h-96 object-cover rounded-2xl transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+              ></div>
+            </div>
+
+            <div class="lg:w-1/2 w-full space-y-6">
+              <h3 class="text-3xl font-bold text-blue-400">
+                Online Voting System Using Blockchain Technology
+              </h3>
+              <p class="text-gray-300 text-lg leading-relaxed">
+                Pioneering research leveraging blockchain technology to
+                revolutionize digital voting systems, ensuring unprecedented
+                security and transparency through decentralized architecture.
+              </p>
+
+              <div class="space-y-4">
+                <div class="flex items-center gap-4 text-blue-300">
+                  <i class="fas fa-book-open text-xl"></i>
+                  <span class="font-semibold"
+                    >International Journal of Scientific Research in Engineering
+                    & Management (IJSREM)</span
+                  >
+                </div>
+
+                <div class="flex items-center gap-4 text-purple-300">
+                  <i class="fas fa-calendar-alt text-xl"></i>
+                  <span class="font-semibold">04 April 2024</span>
+                </div>
+              </div>
+
+              <a
+                href="https://ijsrem.com/download/online-voting-system-using-blockchain-technology/"
+                target="_blank"
+                class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg font-semibold hover:shadow-xl transition-all"
+              >
+                <i class="fas fa-external-link-alt"></i>
+                Explore Research Paper
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Research Item 2 -->
+        <div class="research-card mb-16 animate-fadeIn">
+          <div
+            class="flex flex-col lg:flex-row-reverse gap-8 items-center bg-gray-900/50 backdrop-blur-sm rounded-3xl p-8 border border-gray-800 hover:border-blue-500/30 transition-all duration-300"
+          >
+            <div
+              class="lg:w-1/2 w-full relative overflow-hidden rounded-2xl group"
+            >
+              <img
+                src="image/r.jpg"
+                alt="Secure Voting Mechanism"
+                class="research-image w-full h-96 object-cover rounded-2xl transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+              ></div>
+            </div>
+
+            <div class="lg:w-1/2 w-full space-y-6">
+              <h3 class="text-3xl font-bold text-purple-400">
+                Blockchain-Based Secure Voting Mechanism
+              </h3>
+              <p class="text-gray-300 text-lg leading-relaxed">
+                Innovative study implementing cryptographic principles and smart
+                contracts to develop tamper-proof voting systems with real-time
+                audit capabilities.
+              </p>
+
+              <div class="space-y-4">
+                <div class="flex items-center gap-4 text-blue-300">
+                  <i class="fas fa-book-open text-xl"></i>
+                  <span class="font-semibold"
+                    >International Journal of Blockchain Research</span
+                  >
+                </div>
+
+                <div class="flex items-center gap-4 text-purple-300">
+                  <i class="fas fa-calendar-alt text-xl"></i>
+                  <span class="font-semibold">15 June 2024</span>
+                </div>
+              </div>
+
+              <a
+                href="https://ijsrem.com/download/blockchain-based-secure-voting-mechanism/"
+                target="_blank"
+                class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg font-semibold hover:shadow-xl transition-all"
+              >
+                <i class="fas fa-external-link-alt"></i>
+                Access Full Publication
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+
+
+      <div class="bg-[#010106] text-white">
+    <section class="py-20 px-4">
+      <h1
+        class="text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
+      >
+        Professional Accolades
+      </h1>
+
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <!-- Item 1 - Vertical -->
+          <div class="gallery-card gradient-border row-span-2">
+            <div
+              class="group relative h-full bg-gray-900/50 backdrop-blur-sm rounded-xl overflow-hidden"
+            >
+              <div
+                class="image-overlay absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 transition-opacity flex items-end p-6"
+              >
+                <div class="space-y-2">
+                  <h3 class="text-xl font-bold">Blockchain Certification</h3>
+                  <p class="text-blue-300 text-sm">Issued: 2024</p>
+                </div>
+              </div>
+              <img
+                src="./image/c2.jpeg"
+                class="w-full h-full object-cover transition-transform duration-500"
+              />
+            </div>
+          </div>
+
+          <!-- Item 2 - Square -->
+          <div class="gallery-card gradient-border md:col-span-1">
+            <div
+              class="group relative h-full w-full bg-gray-900/50 backdrop-blur-sm rounded-xl overflow-hidden aspect-square"
+            >
+              <div
+                class="image-overlay absolute inset-0 bg-black/60 opacity-0 transition-opacity flex items-center justify-center"
+              >
+                <!-- <button
+                  class="px-6 py-3 bg-purple-500 rounded-lg font-semibold hover:bg-purple-600"
+                >
+                  View Details
+                </button> -->
+              </div>
+              <img
+                src="./image/jc1.png"
+                class="w-full h-full object-cover overflow-hidden"
+              />
+            </div>
+          </div>
+
+          <!-- Item 3 - Horizontal -->
+          <div class="gallery-card gradient-border md:col-span-2">
+            <div
+              class="group relative h-full bg-gray-900/50 backdrop-blur-sm rounded-xl overflow-hidden aspect-video"
+            >
+              <div
+                class="image-overlay absolute inset-0 bg-gradient-to-r from-purple-500/30 via-transparent to-transparent opacity-0 transition-opacity flex items-center p-6"
+              >
+                <h3 class="text-2xl font-bold max-w-md">
+                  Advanced JavaScript Certification
+                </h3>
+              </div>
+              <img src="./image/c4.jpeg" class="w-full h-full object-cover" />
+            </div>
+          </div>
+
+          <!-- Item 4 - Square -->
+          <div class="gallery-card gradient-border">
+            <div
+              class="group relative h-full bg-gray-900/50 backdrop-blur-sm rounded-xl overflow-hidden aspect-square"
+            >
+              <div
+                class="image-overlay absolute inset-0 bg-black/60 opacity-0 transition-opacity flex items-center justify-center"
+              >
+                <!-- <button
+                  class="px-6 py-3 bg-purple-500 rounded-lg font-semibold hover:bg-purple-600"
+                >
+                  View Details
+                </button> -->
+              </div>
+              <img src="./image/jc1.png" class="w-full h-full object-cover" />
+            </div>
+          </div>
+
+          <!-- Item 5 - Vertical -->
+          <div class="gallery-card gradient-border row-span-2">
+            <div
+              class="group relative h-full bg-gray-900/50 backdrop-blur-sm rounded-xl overflow-hidden"
+            >
+              <div
+                class="image-overlay absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-transparent opacity-0 transition-opacity flex items-start p-6"
+              >
+                <div class="badge bg-blue-500 px-3 py-1 rounded-full text-xs">
+                  New
+                </div>
+              </div>
+              <img src="./image/c2.jpeg" class="w-full h-full object-cover" />
+            </div>
+          </div>
+
+          <!-- Item 6 - Square -->
+          <div class="gallery-card gradient-border">
+            <div
+              class="group relative h-full bg-gray-900/50 backdrop-blur-sm rounded-xl overflow-hidden aspect-square"
+            >
+              <div
+                class="image-overlay absolute inset-0 bg-black/60 opacity-0 transition-opacity flex items-center justify-center"
+              >
+                <!-- <button
+                  class="px-6 py-3 bg-blue-500 rounded-lg font-semibold hover:bg-blue-600"
+                >
+                  View Certificate
+                </button> -->
+              </div>
+              <img src="./image/c3.jpeg" class="w-full h-full object-cover" />
+            </div>
+          </div>
+
+          <!-- Item 7 - Horizontal -->
+          <div class="gallery-card gradient-border md:col-span-2">
+            <div
+              class="group relative h-full bg-gray-900/50 backdrop-blur-sm rounded-xl overflow-hidden aspect-video"
+            >
+              <div
+                class="image-overlay absolute inset-0 bg-gradient-to-l from-blue-500/30 via-transparent to-transparent opacity-0 transition-opacity flex items-end justify-end p-6"
+              >
+                <div class="text-right">
+                  <h3 class="text-xl font-bold">Cloud Certification</h3>
+                  <p class="text-blue-300 text-sm">AWS Certified</p>
+                </div>
+              </div>
+              <img src="./image/c4.jpeg" class="w-full h-full object-cover" />
+            </div>
+          </div>
+
+          <!-- Item 8 - Square -->
+          <div class="gallery-card gradient-border">
+            <div
+              class="group relative h-full w-full bg-gray-900/50 backdrop-blur-sm rounded-xl overflow-hidden aspect-square"
+            >
+              <div
+                class="image-overlay absolute inset-0 bg-black/60 opacity-0 transition-opacity flex items-center justify-center"
+              >
+                <!-- <button
+                  class="px-6 py-3 bg-purple-500 rounded-lg font-semibold hover:bg-purple-600"
+                >
+                  View Details
+                </button> -->
+              </div>
+              <img src="./image/jc1.png" class="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
     <iframe
-      src="contact.html"
+      src="worked.html"
       width="100%"
-      height="1000px"
+      height="850px"
       style="border: none"
       id="contact"
     ></iframe>
+  
+
+     <div class="bg-[#010106] text-white">
+    <section class="py-20 px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h1
+            class="text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4"
+          >
+            Let's Connect
+          </h1>
+          <p class="text-xl text-gray-400">
+            Have a project in mind? Let's make it reality!
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <!-- Contact Info Card -->
+          <div
+            class="contact-card bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-800 hover:border-blue-500/30 transition-all duration-300"
+          >
+            <div class="space-y-6">
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-14 h-14 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center"
+                >
+                  <i class="fas fa-map-marker-alt text-2xl text-white"></i>
+                </div>
+                <div>
+                  <h2 class="text-2xl font-bold">Location</h2>
+                  <p class="text-gray-400">Janakpur, Dhanusa, Nepal</p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-14 h-14 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center"
+                >
+                  <i class="fas fa-envelope text-2xl text-white"></i>
+                </div>
+                <div>
+                  <h2 class="text-2xl font-bold">Email</h2>
+                  <a
+                    href="mailto:prabinmahato415@gmail.com"
+                    class="text-blue-400 hover:text-blue-300"
+                  >
+                    prabinmahato415@gmail.com
+                  </a>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-14 h-14 bg-gradient-to-br from-pink-500 to-red-500 rounded-xl flex items-center justify-center"
+                >
+                  <i class="fas fa-phone-alt text-2xl text-white"></i>
+                </div>
+                <div>
+                  <h2 class="text-2xl font-bold">Phone</h2>
+                  <p class="text-gray-400">+977 - 9808676092</p>
+                  <p class="text-gray-400">+91 - 8969360908</p>
+                </div>
+              </div>
+
+              <div class="pt-6 border-t border-gray-800">
+                <h3 class="text-xl font-semibold mb-4">Connect Socially</h3>
+                <div class="flex gap-6">
+                  <a
+                    href="https://www.facebook.com/kumarprabinsp"
+                    target="_blank"
+                    class="p-3 bg-gray-800 rounded-full hover:bg-blue-600 transition-all"
+                  >
+                    <i class="fab fa-facebook-f text-2xl"></i>
+                  </a>
+                  <a
+                    href="https://www.instagram.com/i_prabin01"
+                    target="_blank"
+                    class="p-3 bg-gray-800 rounded-full hover:bg-pink-600 transition-all"
+                  >
+                    <i class="fab fa-instagram text-2xl"></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/feed/"
+                    target="_blank"
+                    class="p-3 bg-gray-800 rounded-full hover:bg-blue-400 transition-all"
+                  >
+                    <i class="fab fa-linkedin-in text-2xl"></i>
+                  </a>
+                  <a
+                    href="https://github.com/"
+                    target="_blank"
+                    class="p-3 bg-gray-800 rounded-full hover:bg-gray-600 transition-all"
+                  >
+                    <i class="fab fa-github text-2xl"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div
+            class="contact-card bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-800 hover:border-purple-500/30 transition-all duration-300"
+          >
+            <form
+              class="space-y-6"
+              onsubmit="sendEmail(); reset(); return false"
+            >
+              <div>
+                <label class="block text-sm font-semibold mb-2"
+                  >Full Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  required
+                  class="form-input w-full px-4 py-3 bg-gray-800 rounded-lg border border-gray-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/50 transition-all"
+                />
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label class="block text-sm font-semibold mb-2">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    required
+                    class="form-input w-full px-4 py-3 bg-gray-800 rounded-lg border border-gray-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/50 transition-all"
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm font-semibold mb-2">Phone</label>
+                  <input
+                    type="tel"
+                    id="number"
+                    required
+                    class="form-input w-full px-4 py-3 bg-gray-800 rounded-lg border border-gray-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/50 transition-all"
+                  />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label class="block text-sm font-semibold mb-2"
+                    >Country</label
+                  >
+                  <input
+                    type="text"
+                    id="country"
+                    class="form-input w-full px-4 py-3 bg-gray-800 rounded-lg border border-gray-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/50 transition-all"
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm font-semibold mb-2">City</label>
+                  <input
+                    type="text"
+                    id="city"
+                    class="form-input w-full px-4 py-3 bg-gray-800 rounded-lg border border-gray-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/50 transition-all"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-sm font-semibold mb-2">Message</label>
+                <textarea
+                  id="query"
+                  rows="4"
+                  required
+                  class="form-input w-full px-4 py-3 bg-gray-800 rounded-lg border border-gray-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/50 transition-all"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-[1.02]"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Thank You Message -->
+        <div class="mt-16 text-center border-t border-gray-800 pt-12">
+          <p
+            class="text-xl italic bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent font-medium"
+          >
+            "Thank you for choosing to spend your time with me. I'm honored to
+            have you here and look forward to serving you in the best possible
+            way."
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
 
     <!-- Footer -->
-    <footer class="footer">
-      <div class="footerContainer">
-        <h1>
-          Copyright <i class="fa-regular fa-copyright"></i> | 2023
-          prabinmahato.com.np
-        </h1>
+   <footer class="bg-[#010106] text-gray-300 py-3  relative">
+  <div class="max-w-7xl mx-auto border-t border-gray-800  px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 py-6 pt-12 md:grid-cols-4 gap-8">
+      <!-- About Section -->
+      <div class="space-y-4">
+        <h3 class="text-white text-xl font-bold mb-4">Prabin Mahato</h3>
+        <p class="text-sm">Full Stack Developer specializing in modern web technologies and innovative solutions.</p>
       </div>
 
-      <div class="fixed bottom-10 right-10">
-        <a href="#home" class="uoers"><span class="uoers">⬆️</span></a>
+      <!-- Quick Links -->
+      <div class="space-y-4">
+        <h4 class="text-white text-lg font-semibold mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="#home" class="hover:text-blue-400 transition-colors">Home</a></li>
+          <li><a href="#projects" class="hover:text-blue-400 transition-colors">Projects</a></li>
+          <li><a href="#skills" class="hover:text-blue-400 transition-colors">Skills</a></li>
+          <li><a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a></li>
+        </ul>
       </div>
-    </footer>
+
+      <!-- Contact Info -->
+      <div class="space-y-4">
+        <h4 class="text-white text-lg font-semibold mb-4">Connect</h4>
+        <div class="space-y-2">
+          <p class="flex items-center gap-2">
+            <i class="fas fa-envelope text-blue-400"></i>
+            prabinmahato415@gmail.com
+          </p>
+          <p class="flex items-center gap-2">
+            <i class="fas fa-phone-alt text-blue-400"></i>
+            +977 9808676092
+          </p>
+        </div>
+      </div>
+
+      <!-- Social Media -->
+      <div class="space-y-4">
+        <h4 class="text-white text-lg font-semibold mb-4">Follow Me</h4>
+        <div class="flex space-x-4">
+          <a href="https://github.com/prabin012" target="_blank" class="p-2 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors">
+            <i class="fab fa-github text-xl"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/iprabin/" target="_blank" class="p-2 rounded-full bg-gray-800 hover:bg-blue-600 transition-colors">
+            <i class="fab fa-linkedin-in text-xl"></i>
+          </a>
+          <a href="https://www.facebook.com/kumarprabinsp" target="_blank" class="p-2 rounded-full bg-gray-800 hover:bg-blue-500 transition-colors">
+            <i class="fab fa-facebook-f text-xl"></i>
+          </a>
+          <a href="https://www.instagram.com/i_prabin01/" target="_blank" class="p-2 rounded-full bg-gray-800 hover:bg-pink-600 transition-colors">
+            <i class="fab fa-instagram text-xl"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright Section -->
+    <div class="border-t border-gray-800 py-6 text-center">
+      <p class="text-sm text-gray-500">
+        <i class="far fa-copyright"></i> 2023 prabinmahato.com.np | All rights reserved
+      </p>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <a href="#home" class="fixed bottom-8 right-8 p-3 bg-blue-600 hover:bg-blue-700 rounded-full shadow-lg transition-all duration-300 group">
+    <i class="fas fa-arrow-up text-white group-hover:-translate-y-1 transition-transform"></i>
+  </a>
+</footer>
 
     <script src="index.js"></script>
     <script
@@ -208,6 +1090,68 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script>
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const closeMenuBtn = document.getElementById('close-menu-btn');
+    var mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('-translate-x-full');
+    });
+
+    closeMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.add('-translate-x-full');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+            mobileMenu.classList.add('-translate-x-full');
+        }
+    });
+
+    // Close menu on link click
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('-translate-x-full');
+        });
+    });
+
+    // Smooth scroll for all navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            target.scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Active link highlighting
+    window.addEventListener('scroll', () => {
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link, #mobile-menu a');
+        
+        sections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top <= 100 && rect.bottom >= 100) {
+                const id = section.getAttribute('id');
+                navLinks.forEach(link => {
+                    link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+                });
+            }
+        });
+    });
+</script>
+
+<!--  -->
+
+
+
+<!--  -->
+
     <script>
       function sendEmail() {
         Email.send({

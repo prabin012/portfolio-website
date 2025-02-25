@@ -3,105 +3,151 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome Page</title>
+    <title>Prabin Kumar Mahato | Full Stack Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
-      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     />
     <style>
-      /* Add smooth fade-in animation */
-      .fade-in {
-        animation: fadeIn 2s ease-in-out;
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
       }
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
+      .floating {
+        animation: float 6s ease-in-out infinite;
+      }
+      .gradient-text {
+        background: linear-gradient(45deg, #030436, #ec4899);
+        -webkit-text-fill-color: transparent;
+      }
+      .hover-tilt {
+        transition: transform 0.3s ease;
+      }
+      .hover-tilt:hover {
+        transform: perspective(1000px) rotateX(10deg) rotateY(10deg);
       }
     </style>
   </head>
-  <body class="bg-[#010106] text-white font-sans">
-    <div class="min-h-screen flex items-center justify-center px-6 py-12">
+  <body class="bg-[#010106] min-h-screen">
+    <div class="container mx-auto px-4 py-12">
       <div
-        class="max-w-4xl w-full bg-[#1A202C] bg-opacity-80 rounded-lg shadow-2xl overflow-hidden p-8 text-center fade-in"
+        class="flex flex-col lg:flex-row items-center justify-between gap-12"
       >
-        <div class="relative">
-          <img
-            src="image/p10.jpg"
-            alt="Prabin Kumar Mahato"
-            class="w-40 h-40 rounded-full border-4 object-cover object-fit border-indigo-600 mx-auto mb-6"
-          />
-          <h1 class="text-4xl font-bold mb-4 text-indigo-400">
-            Welcome to My Portfolio
+        <!-- Left Column -->
+
+        <!-- Right Column -->
+        <div class="w-full lg:w-1/2 space-y-8">
+          <h1
+            class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-pink-400 mb-8"
+          >
+            Turning Ideas Into<br />Digital Reality
           </h1>
-          <p class="text-lg text-gray-300 mb-6">
-            Hello, I'm
-            <span class="text-indigo-300 font-semibold"
-              >Prabin Kumar Mahato</span
-            >, a passionate Full Stack Developer who loves coding.
+
+          <p class="text-lg text-gray-300 leading-relaxed">
+            Passionate full-stack developer specializing in crafting robust web
+            applications. With 2+ years of hands-on experience in transforming
+            complex problems into elegant solutions.
           </p>
 
-          <p class="text-xl text-gray-200 mb-6">
-            I specialize in creating dynamic web applications that solve
-            real-world problems with elegant solutions. Let's collaborate and
-            bring ideas to life.
-          </p>
-
-          <!-- Action Buttons -->
-          <div class="mt-8 flex justify-center gap-6">
-            <button
-              class="bg-indigo-600 hover:bg-indigo-700 text-white py-3 px-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 ease-in-out"
+          <div class="flex flex-col sm:flex-row gap-6 mt-12">
+            <a
+              href="./image/React_CV_Prabin_KTM_Updated.pdf"
+              download
+              class="flex-1 py-4 px-8 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg font-semibold text-white text-center hover:from-indigo-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl"
             >
-              <a href="https://github.com/prabin012" target="_blank">GitHub</a>
-            </button>
-            <button
-              class="bg-pink-600 hover:bg-pink-700 text-white py-3 px-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 ease-in-out"
+              Download CV
+            </a>
+            <a
+              href="mailto:your.email@example.com"
+              class="flex-1 py-4 px-8 border-2 border-indigo-600 rounded-lg font-semibold text-white text-center hover:bg-indigo-600/20 transition-all shadow-lg hover:shadow-xl"
             >
-              <a href="./image/React_CV_Prabin_KTM_Updated.pdf" download
-                >Download Resume</a
-              >
-            </button>
+              Let's Connect
+            </a>
           </div>
 
-          <!-- Social Icons -->
-          <div class="mt-6 flex justify-center gap-6 text-2xl text-gray-200">
-            <a
-              href="https://github.com/prabin012"
-              target="_blank"
-              class="hover:text-white"
-            >
-              <i class="fa-brands fa-github"></i>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/iprabin/"
-              target="_blank"
-              class="text-blue-500 hover:text-white"
-            >
-              <i class="fa-brands fa-linkedin"></i>
-            </a>
-            <a
-              href="https://www.instagram.com/i_prabin01/"
-              target="_blank"
-              class="text-red-400 hover:text-white"
-            >
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a
-              href="tel:+977-9808676092"
-              class="text-green-500 hover:text-white"
-            >
-              <i class="fa-brands fa-whatsapp"></i>
-            </a>
+          <div class="mt-12 grid grid-cols-2 gap-4 text-gray-300">
+            <div class="p-4 bg-white/5 rounded-lg backdrop-blur-sm">
+              <h3 class="text-indigo-400 font-bold mb-2">Tech Stack</h3>
+              <p class="text-sm">React, Node.js, Python, MongoDB</p>
+            </div>
+            <div class="p-4 bg-white/5 rounded-lg backdrop-blur-sm">
+              <h3 class="text-pink-400 font-bold mb-2">Passion</h3>
+              <p class="text-sm">Open Source • UI/UX • AI Integration</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="w-full lg:w-1/2 space-y-8 relative flex justify-center flex-col items-center"
+        >
+          <div class="floating hover-tilt">
+            <div class="relative inline-block">
+              <img
+                src="image/p10.jpg"
+                alt="Prabin Kumar Mahato"
+                class="w-64 h-64 rounded-full border-4 border-white/20 shadow-2xl object-cover"
+              />
+              <div
+                class="absolute inset-0 rounded-full border-4 border-transparent animate-spin-slow"
+                style="border-top-color: #03042a; border-right-color: #eb5b0e"
+              ></div>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <h2 class="text-4xl font-bold text-white text-center lg:text-left">
+              Prabin Kumar <span class="">Mahato</span>
+            </h2>
+            <p class="text-xl text-purple-200 text-center lg:text-left">
+              Full Stack Developer & Problem Solver
+            </p>
+
+            <div class="flex justify-center lg:justify-start space-x-6 mt-6">
+              <a
+                href="https://github.com/prabin012"
+                target="_blank"
+                class="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300"
+              >
+                <i class="fab fa-github text-2xl text-white"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/iprabin/"
+                target="_blank"
+                class="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300"
+              >
+                <i class="fab fa-linkedin text-2xl text-blue-400"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/iprabin/"
+                target="_blank"
+                class="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300"
+              >
+                <i class="fab fa-linkedin text-2xl text-blue-400"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
+    </div>
+
+    <!-- Animated Background Elements -->
+    <div
+      class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none"
+    >
+      <div
+        class="absolute w-96 h-96 bg-purple-500/10 rounded-full -top-48 -left-48"
+      ></div>
+      <div
+        class="absolute w-96 h-96 bg-indigo-500/10 rounded-full bottom-0 -right-48"
+      ></div>
     </div>
   </body>
 </html>

@@ -3,130 +3,187 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Achievement & Certifications</title>
+    <title>Achievements Gallery</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
-      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     />
+    <style>
+      @keyframes cardEntrance {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .gallery-card {
+        animation: cardEntrance 0.6s ease-out;
+      }
+      .gallery-card:hover .image-overlay {
+        opacity: 1;
+      }
+      .gradient-border {
+        background: linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899);
+        padding: 2px;
+        border-radius: 12px;
+      }
+    </style>
   </head>
-  <body class="bg-[#010106]">
-    <!-- Achievement & Certifications Section -->
-    <section class="bg-[#010106] py-12" id="bg-section">
-      <!-- Heading -->
-      <h1 class="text-white text-center text-4xl font-bold mb-12 py-5">
-        Achievement & Certifications
+  <body class="bg-[#010106] text-white">
+    <section class="py-20 px-4">
+      <h1
+        class="text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
+      >
+        Professional Accolades
       </h1>
 
-      <div class="max-w-7xl mx-auto px-10">
-        <div class="relative">
-          <!-- Outer Border for Styling -->
-          <div
-            class="absolute inset-0 border-4 border-[#4b5563] rounded-xl opacity-50 mx-5"
-          ></div>
-
-          <!-- Certificate Title - Centered -->
-          <div
-            class="flex justify-center items-center col-span-1 sm:col-span-2 lg:col-span-3 py-5"
-          >
-            <span
-              class="text-white text-2xl sm:text-4xl font-semibold uppercase text-center py-6"
-              >Certificate</span
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <!-- Item 1 - Vertical -->
+          <div class="gallery-card gradient-border row-span-2">
+            <div
+              class="group relative h-full bg-gray-900/50 backdrop-blur-sm rounded-xl overflow-hidden"
             >
+              <div
+                class="image-overlay absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 transition-opacity flex items-end p-6"
+              >
+                <div class="space-y-2">
+                  <h3 class="text-xl font-bold">Blockchain Certification</h3>
+                  <p class="text-blue-300 text-sm">Issued: 2024</p>
+                </div>
+              </div>
+              <img
+                src="./image/c2.jpeg"
+                class="w-full h-full object-cover transition-transform duration-500"
+              />
+            </div>
           </div>
 
-          <!-- Image Grid with Mixed Layout -->
-          <div
-            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 py-6"
-          >
-            <!-- Large Image (Spanning 2 Columns on Large Screens) -->
+          <!-- Item 2 - Square -->
+          <div class="gallery-card gradient-border md:col-span-1">
             <div
-              class="col-span-1 sm:col-span-2 lg:col-span-2 p-4 bg-[#010106] rounded-xl border-2 border-[#4b5563] transform hover:scale-105 transition duration-300 ease-in-out"
+              class="group relative h-full w-full bg-gray-900/50 backdrop-blur-sm rounded-xl overflow-hidden aspect-square"
             >
-              <img
-                src="./image/c2.jpeg"
-                alt="Certificate 1"
-                class="w-full h-auto rounded-lg shadow-lg"
-              />
-            </div>
-
-            <!-- Smaller Image 1 -->
-            <div
-              class="p-4 bg-[#010106] rounded-xl border-2 border-[#4b5563] transform hover:scale-105 transition duration-300 ease-in-out"
-            >
-              <img
-                src="./image/c3.jpeg"
-                alt="Certificate 2"
-                class="w-full h-auto rounded-lg shadow-lg"
-              />
-              <img
-                src="./image/c3.jpeg"
-                alt="Certificate 2"
-                class="w-full h-auto rounded-lg shadow-lg py-5"
-              />
-            </div>
-
-            <!-- Smaller Image 2 -->
-            <div
-              class="p-4 bg-[#010106] rounded-xl border-2 border-[#4b5563] transform hover:scale-105 transition duration-300 ease-in-out"
-            >
-              <img
-                src="./image/c4.jpeg"
-                alt="Certificate 3"
-                class="w-full h-auto rounded-lg shadow-lg"
-              />
+              <div
+                class="image-overlay absolute inset-0 bg-black/60 opacity-0 transition-opacity flex items-center justify-center"
+              >
+                <!-- <button
+                  class="px-6 py-3 bg-purple-500 rounded-lg font-semibold hover:bg-purple-600"
+                >
+                  View Details
+                </button> -->
+              </div>
               <img
                 src="./image/jc1.png"
-                alt="Certificate 4"
-                class="w-full h-auto rounded-lg shadow-lg py-5"
+                class="w-full h-full object-cover overflow-hidden"
               />
             </div>
+          </div>
 
-            <!-- Large Image (Spanning 2 Columns on Large Screens) -->
+          <!-- Item 3 - Horizontal -->
+          <div class="gallery-card gradient-border md:col-span-2">
             <div
-              class="col-span-1 sm:col-span-2 lg:col-span-2 p-4 bg-[#010106] rounded-xl border-2 border-[#4b5563] transform hover:scale-105 transition duration-300 ease-in-out"
+              class="group relative h-full bg-gray-900/50 backdrop-blur-sm rounded-xl overflow-hidden aspect-video"
             >
-              <img
-                src="./image/jc1.png"
-                alt="Certificate 4"
-                class="w-full h-auto rounded-lg shadow-lg"
-              />
+              <div
+                class="image-overlay absolute inset-0 bg-gradient-to-r from-purple-500/30 via-transparent to-transparent opacity-0 transition-opacity flex items-center p-6"
+              >
+                <h3 class="text-2xl font-bold max-w-md">
+                  Advanced JavaScript Certification
+                </h3>
+              </div>
+              <img src="./image/c4.jpeg" class="w-full h-full object-cover" />
             </div>
+          </div>
 
-            <!-- Smaller Image 3 -->
+          <!-- Item 4 - Square -->
+          <div class="gallery-card gradient-border">
             <div
-              class="p-4 bg-[#010106] rounded-xl border-2 border-[#4b5563] transform hover:scale-105 transition duration-300 ease-in-out"
+              class="group relative h-full bg-gray-900/50 backdrop-blur-sm rounded-xl overflow-hidden aspect-square"
             >
-              <img
-                src="./image/c2.jpeg"
-                alt="Certificate 5"
-                class="w-full h-auto rounded-lg shadow-lg"
-              />
+              <div
+                class="image-overlay absolute inset-0 bg-black/60 opacity-0 transition-opacity flex items-center justify-center"
+              >
+                <!-- <button
+                  class="px-6 py-3 bg-purple-500 rounded-lg font-semibold hover:bg-purple-600"
+                >
+                  View Details
+                </button> -->
+              </div>
+              <img src="./image/jc1.png" class="w-full h-full object-cover" />
             </div>
+          </div>
 
-            <!-- Smaller Image 4 -->
+          <!-- Item 5 - Vertical -->
+          <div class="gallery-card gradient-border row-span-2">
             <div
-              class="p-4 bg-[#010106] rounded-xl border-2 border-[#4b5563] transform hover:scale-105 transition duration-300 ease-in-out"
+              class="group relative h-full bg-gray-900/50 backdrop-blur-sm rounded-xl overflow-hidden"
             >
-              <img
-                src="./image/c2.jpeg"
-                alt="Certificate 6"
-                class="w-full h-auto rounded-lg shadow-lg"
-              />
+              <div
+                class="image-overlay absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-transparent opacity-0 transition-opacity flex items-start p-6"
+              >
+                <div class="badge bg-blue-500 px-3 py-1 rounded-full text-xs">
+                  New
+                </div>
+              </div>
+              <img src="./image/c2.jpeg" class="w-full h-full object-cover" />
             </div>
+          </div>
 
-            <!-- Smaller Image 4 (Duplicate for the Example) -->
+          <!-- Item 6 - Square -->
+          <div class="gallery-card gradient-border">
             <div
-              class="p-4 bg-[#010106] rounded-xl border-2 border-[#4b5563] transform hover:scale-105 transition duration-300 ease-in-out"
+              class="group relative h-full bg-gray-900/50 backdrop-blur-sm rounded-xl overflow-hidden aspect-square"
             >
-              <img
-                src="./image/c2.jpeg"
-                alt="Certificate 6"
-                class="w-full h-auto rounded-lg shadow-lg"
-              />
+              <div
+                class="image-overlay absolute inset-0 bg-black/60 opacity-0 transition-opacity flex items-center justify-center"
+              >
+                <!-- <button
+                  class="px-6 py-3 bg-blue-500 rounded-lg font-semibold hover:bg-blue-600"
+                >
+                  View Certificate
+                </button> -->
+              </div>
+              <img src="./image/c3.jpeg" class="w-full h-full object-cover" />
+            </div>
+          </div>
+
+          <!-- Item 7 - Horizontal -->
+          <div class="gallery-card gradient-border md:col-span-2">
+            <div
+              class="group relative h-full bg-gray-900/50 backdrop-blur-sm rounded-xl overflow-hidden aspect-video"
+            >
+              <div
+                class="image-overlay absolute inset-0 bg-gradient-to-l from-blue-500/30 via-transparent to-transparent opacity-0 transition-opacity flex items-end justify-end p-6"
+              >
+                <div class="text-right">
+                  <h3 class="text-xl font-bold">Cloud Certification</h3>
+                  <p class="text-blue-300 text-sm">AWS Certified</p>
+                </div>
+              </div>
+              <img src="./image/c4.jpeg" class="w-full h-full object-cover" />
+            </div>
+          </div>
+
+          <!-- Item 8 - Square -->
+          <div class="gallery-card gradient-border">
+            <div
+              class="group relative h-full w-full bg-gray-900/50 backdrop-blur-sm rounded-xl overflow-hidden aspect-square"
+            >
+              <div
+                class="image-overlay absolute inset-0 bg-black/60 opacity-0 transition-opacity flex items-center justify-center"
+              >
+                <!-- <button
+                  class="px-6 py-3 bg-purple-500 rounded-lg font-semibold hover:bg-purple-600"
+                >
+                  View Details
+                </button> -->
+              </div>
+              <img src="./image/jc1.png" class="w-full h-full object-cover" />
             </div>
           </div>
         </div>

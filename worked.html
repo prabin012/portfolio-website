@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collaborations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <style>
+      .swiper-slide {
+        opacity: 0.5;
+        transition: opacity 0.5s ease;
+      }
+      .swiper-slide-active {
+        opacity: 1;
+        transform: scale(1.05);
+      }
+      .company-card:hover .company-logo {
+        transform: rotateY(360deg);
+      }
+    </style>
+  </head>
+  <body class="bg-[#010106] text-white">
+    <section class="py-20 px-4">
+      <div class="max-w-7xl mx-auto">
+        <h2
+          class="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
+        >
+          Professional Collaborations
+        </h2>
+
+        <!-- Slider main container -->
+        <div class="swiper collaborationSwiper">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <div
+                class="company-card bg-gray-900/50 backdrop-blur-sm rounded-2xl border border-gray-800 p-8 h-[500px]"
+              >
+                <div
+                  class="company-logo w-32 h-32 mx-auto mb-8 transition-transform duration-700"
+                >
+                  <img
+                    src="https://cdn.worldvectorlogo.com/logos/google-2015.svg"
+                    alt="Google"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+                <div class="text-center">
+                  <h3 class="text-2xl font-bold mb-4">Google LLC</h3>
+                  <p class="text-gray-400 mb-6">
+                    1600 Amphitheatre Parkway<br />
+                    Mountain View, CA 94043<br />
+                    United States
+                  </p>
+                  <p class="text-gray-300">
+                    Collaborated on cloud infrastructure optimization and
+                    AI-driven analytics solutions. Contributed to developing
+                    scalable solutions for enterprise clients using Google Cloud
+                    Platform.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <div
+                class="company-card bg-gray-900/50 backdrop-blur-sm rounded-2xl border border-gray-800 p-8 h-[500px]"
+              >
+                <div
+                  class="company-logo w-32 h-32 mx-auto mb-8 transition-transform duration-700"
+                >
+                  <img
+                    src="https://cdn.worldvectorlogo.com/logos/microsoft.svg"
+                    alt="Microsoft"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+                <div class="text-center">
+                  <h3 class="text-2xl font-bold mb-4">Microsoft Corporation</h3>
+                  <p class="text-gray-400 mb-6">
+                    One Microsoft Way<br />
+                    Redmond, WA 98052-6399<br />
+                    United States
+                  </p>
+                  <p class="text-gray-300">
+                    Partnered in developing enterprise-grade solutions using
+                    Azure cloud services. Worked on integrating AI capabilities
+                    into business productivity tools.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+              <div
+                class="company-card bg-gray-900/50 backdrop-blur-sm rounded-2xl border border-gray-800 p-8 h-[500px]"
+              >
+                <div
+                  class="company-logo w-32 h-32 mx-auto mb-8 transition-transform duration-700"
+                >
+                  <img
+                    src="https://cdn.worldvectorlogo.com/logos/ibm.svg"
+                    alt="IBM"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+                <div class="text-center">
+                  <h3 class="text-2xl font-bold mb-4">IBM Corporation</h3>
+                  <p class="text-gray-400 mb-6">
+                    1 New Orchard Road<br />
+                    Armonk, New York 10504<br />
+                    United States
+                  </p>
+                  <p class="text-gray-300">
+                    Collaborated on quantum computing research and enterprise
+                    blockchain solutions. Developed AI-powered business
+                    analytics tools for enterprise clients.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="swiper-slide">
+              <div
+                class="company-card bg-gray-900/50 backdrop-blur-sm rounded-2xl border border-gray-800 p-8 h-[500px]"
+              >
+                <div
+                  class="company-logo w-32 h-32 mx-auto mb-8 transition-transform duration-700"
+                >
+                  <img
+                    src="https://cdn.worldvectorlogo.com/logos/amazon.svg"
+                    alt="Amazon"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+                <div class="text-center">
+                  <h3 class="text-2xl font-bold mb-4">Amazon Web Services</h3>
+                  <p class="text-gray-400 mb-6">
+                    410 Terry Ave North<br />
+                    Seattle, WA 98109<br />
+                    United States
+                  </p>
+                  <p class="text-gray-300">
+                    Partnered in cloud infrastructure development and machine
+                    learning solutions. Contributed to optimizing AWS services
+                    for large-scale enterprise applications.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation buttons -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".collaborationSwiper", {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
