@@ -1,0 +1,28 @@
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, #030436, #ec4899);
+  -webkit-text-fill-color: transparent;
+}
+
+.hover-tilt {
+  transition: transform 0.3s ease;
+}
+
+.hover-tilt:hover {
+  transform: perspective(1000px) rotateX(10deg) rotateY(10deg);
+}
