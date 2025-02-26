@@ -7,6 +7,9 @@
     <title>Prabin Kumar</title>
     <link rel="icon" href="image/logo2.jpg" />
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="skill.css">
+    <link rel="stylesheet" href="welcoms.css">
     <!-- Google tag (gtag.js) -->
     <script
       async
@@ -34,6 +37,7 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
       html {
         scroll-behavior: smooth;
@@ -48,7 +52,7 @@
   <body class="bg-[#010106]  ">
     <!-- Navbar -->
    <nav class=" w-full bg-[#010106] backdrop-blur-md border-b  border-gray-800 z-50 ">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 " id="home">
         <div class="flex items-center justify-between h-16">
             <!-- Logo -->
             <div class="flex-shrink-0 flex items-center">
@@ -60,22 +64,22 @@
             <!-- Desktop Menu -->
             <div class="hidden md:block">
                 <div class="flex space-x-8">
-                    <a href="#home" class="nav-link text-white hover:text-white px-3 py-2 rounded-md transition-all duration-300">
+                    <a href="#home" class="nav-link text-white hover:border-b hover:border-orange-600 hover:rounded-none px-3 py-2 rounded-md transition-all duration-300">
                         Home
                     </a>
-                    <a href="#about" class="nav-link text-white hover:text-white px-3 py-2 rounded-md transition-all duration-300">
+                    <a href="#about" class="nav-link text-white hover:border-b hover:border-orange-600 hover:rounded-none hover:text-orange-600 px-3 py-2 rounded-md transition-all duration-300">
                         About
                     </a>
-                    <a href="#skills" class="nav-link text-white hover:text-white px-3 py-2 rounded-md transition-all duration-300">
+                    <a href="#skills" class="nav-link text-white hover:border-b hover:border-orange-600 hover:rounded-none hover:text-orange-600 px-3 py-2 rounded-md transition-all duration-300">
                         Skills
                     </a>
-                    <a href="#projects" class="nav-link text-white hover:text-white px-3 py-2 rounded-md transition-all duration-300">
+                    <a href="#projects" class="nav-link text-white hover:border-b hover:border-orange-600 hover:rounded-none hover:text-orange-600 px-3 py-2 rounded-md transition-all duration-300">
                         Projects
                     </a>
-                    <a href="#certificates" class="nav-link text-white hover:text-white px-3 py-2 rounded-md transition-all duration-300">
+                    <a href="#certificates" class="nav-link text-white hover:border-b hover:border-orange-600 hover:rounded-none hover:text-orange-600 px-3 py-2 rounded-md transition-all duration-300">
                         Certificates
                     </a>
-                    <a href="#contact" class="nav-link text-white hover:text-white px-3 py-2 rounded-md transition-all duration-300">
+                    <a href="#contact" class="nav-link text-white hover:border-b hover:border-orange-600 hover:rounded-none hover:text-orange-600 px-3 py-2 rounded-md transition-all duration-300">
                         Contact
                     </a>
                 </div>
@@ -92,62 +96,237 @@
 
 <!-- Mobile Menu -->
 <div id="mobile-menu" class="md:hidden fixed inset-0 bg-[#010106]/95 backdrop-blur-xl transform -translate-x-full transition-transform duration-300 z-50">
-    <div class="flex flex-col items-end p-6 h-full">
-        <button id="close-menu-btn" class="self-end text-gray-300 hover:text-white mb-8">
+    <div class="flex flex-col items-end  h-full">
+        <button id="close-menu-btn" class="self-end m-3 text-gray-300 hover:text-white mb-8">
             <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
         </button>
-        <nav class="w-full px-4 text-right space-y-6">
-            <a href="#home" class="block text-2xl text-gray-300 hover:text-white py-3 transition-all">Home</a>
-            <a href="#about" class="block text-2xl text-gray-300 hover:text-white py-3 transition-all">About</a>
-            <a href="#skills" class="block text-2xl text-gray-300 hover:text-white py-3 transition-all">Skills</a>
-            <a href="#projects" class="block text-2xl text-gray-300 hover:text-white py-3 transition-all">Projects</a>
-            <a href="#certificates" class="block text-2xl text-gray-300 hover:text-white py-3 transition-all">Certificates</a>
-            <a href="#contact" class="block text-2xl text-gray-300 hover:text-white py-3 transition-all">Contact</a>
+        <nav class="w-full  text-right bg-black space-y-6 px-12">
+            <a href="#home" class="block text-2xl text-white hover:text-white py-3 transition-all">Home</a>
+            <a href="#about" class="block text-2xl text-white hover:text-white py-3 transition-all">About</a>
+            <a href="#skills" class="block text-2xl text-white hover:text-white py-3 transition-all">Skills</a>
+            <a href="#projects" class="block text-2xl text-white hover:text-white py-3 transition-all">Projects</a>
+            <a href="#certificates" class="block text-2xl text-white hover:text-white py-3 transition-all">Certificates</a>
+            <a href="#contact" class="block text-2xl text-white hover:text-white py-3 transition-all">Contact</a>
         </nav>
     </div>
 </div>
 </nav>
 
-    <!-- Welcome Section -->
-    <iframe
-      src="welcome.html"
-      width="100%"
-      height="800px"
-      style="border: none"
+  
 
-    ></iframe>
-   
+ <div class="bg-[#010106]  py-12">
+    <div class="container mx-auto px-4 py-12">
+      <div
+        class="flex flex-col lg:flex-row items-center justify-between gap-12"
+      >
+     
+        <div class="w-full lg:w-1/2 space-y-8">
+          <h1
+            class="text-5xl font-bold bg-clip-text bg-gradient-to-r from-indigo-400 to-pink-400 mb-8"
+          >
+           Empowering Ideas with <br />Digital Innovation
+          </h1>
 
-    <!-- About Section -->
-    <iframe
-      src="about.html"
-      width="100%"
-      height="800px"
-      style="border: none"
-       id="about"
-    ></iframe>
+          <p class="text-lg text-gray-300 leading-relaxed">
+            Passionate full-stack developer specializing in crafting robust web
+            applications. With 1+ years of hands-on experience in transforming
+            complex problems into elegant solutions.
+          </p>
 
-    <!-- Education Section -->
-    <!-- <iframe
-     src="education.html"
-    class="w-full min-h-screen"
-    style="border: none"
-    id="education"
-    ></iframe> -->
+          <div class="flex flex-col sm:flex-row gap-6 mt-12">
+            <a
+              href="./image/React_CV_Prabin_KTM_Updated.pdf"
+              download
+              class="flex-1 py-4 px-8 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg font-semibold text-white text-center hover:from-indigo-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl"
+            >
+              Download CV
+            </a>
+            <a
+              href="https://www.linkedin.com/in/iprabin/" target="_blank"
+              class="flex-1 py-4 px-8 border-2 border-indigo-600 rounded-lg font-semibold text-white text-center hover:bg-indigo-600/20 transition-all shadow-lg hover:shadow-xl"
+            >
+              Let's Connect
+            </a>
+          </div>
+
+          <div class="mt-12 grid grid-cols-2 gap-4 text-gray-300">
+            <div class="p-4 bg-white/5 rounded-lg backdrop-blur-sm">
+              <h3 class="text-indigo-400 font-bold mb-2">Tech stack</h3>
+              <p class="text-sm">React, Node.js, JavaScript, TypeScript, GraphQL, Apollo, Tailwind, MongoDB</p>
+            </div>
+            <div class="p-4 bg-white/5 rounded-lg backdrop-blur-sm">
+              <h3 class="text-pink-400 font-bold mb-2">Passion</h3>
+              <p class="text-sm">Software Engineer • UI/UX • Developer</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="w-full lg:w-1/2 space-y-8 relative flex justify-center flex-col items-center"
+        >
+          <div class="floating hover-tilt">
+            <div class="relative inline-block">
+              <img
+                src="image/p10.jpg"
+                alt="Prabin Kumar Mahato"
+                class="w-64 h-64 rounded-full border-4 border-white/20 shadow-2xl object-cover"
+              />
+              <div
+                class="absolute inset-0 rounded-full border-4 border-transparent animate-spin-slow"
+                style="border-top-color: #03042a; border-right-color: #eb5b0e"
+              ></div>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <h2 class="text-4xl font-bold text-white text-center lg:text-left">
+              Prabin Kumar <span class="">Mahato</span>
+            </h2>
+            <p class="text-xl text-purple-200 text-center lg:text-left">
+              Full Stack Developer & Problem Solver
+            </p>
+
+            <div class="flex justify-center lg:justify-start space-x-6 mt-6">
+              <a
+                href="https://github.com/prabin012"
+                target="_blank"
+                class="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300"
+              >
+                <i class="fab fa-github text-2xl text-white"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/iprabin/"
+                target="_blank"
+                class="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300"
+              >
+                <i class="fab fa-linkedin text-2xl text-blue-400"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/iprabin/"
+                target="_blank"
+                class="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300"
+              >
+                <i class="fab fa-linkedin text-2xl text-blue-400"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Animated Background Elements -->
+    <div
+      class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none"
+    >
+      <div
+        class="absolute w-96 h-96 bg-purple-500/10 rounded-full -top-48 -left-48"
+      ></div>
+      <div
+        class="absolute w-96 h-96 bg-indigo-500/10 rounded-full bottom-0 -right-48"
+      ></div>
+    </div>
+  </div>
+
+<div class="bg-[#010106] text-white  flex items-center justify-center p-10">
+  <section class="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <!-- Image Section -->
+    <div class="flex justify-center group relative">
+      <div class="gradient-border  scale-105 transition-transform duration-500">
+        <img
+          src="image/p10.jpg"
+          alt="Prabin Kumar Mahato"
+          class="w-96 h-96 object-cover gradient-border rounded-xl shadow-2xl filter grayscale group-hover:grayscale-0 transition-all duration-500 animate-fade-in-up"
+        />
+      </div>
+     <div
+            class="absolute inset-0 bg-purple-500/10 rounded-xl z-10 rotate-6 blur-lg"
+          ></div>
+    </div>
+
+    <!-- Content Section -->
+    <div class="space-y-8 animate-fade-in-up">
+      <h1 class="text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+        About Me
+      </h1>
+      <div class="space-y-6 text-gray-300">
+        <p class="text-lg leading-relaxed">
+          I'm <span class="font-semibold text-blue-300">Prabin Kumar Mahato</span>, an Information Science Engineer passionate about
+          creating innovative solutions through full-stack development and problem-solving.
+        </p>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="p-3 bg-gray-900 rounded-xl border border-gray-800 hover:border-blue-500 transition-colors">
+            <h3 class="text-blue-400 font-bold text-lg mb-2">Education</h3>
+            <p class="text-sm">B.Tech in Information Science & Engineering</p>
+          </div>
+          <div class="p-3 bg-gray-900 rounded-xl border border-gray-800 hover:border-purple-500 transition-colors">
+            <h3 class="text-purple-400 text-lg font-bold mb-2"> Experience</h3>
+            <p class="text-sm">1+ Years in Full Stack Development (MERN)</p>
+          </div>
+        </div>
+        <div class="space-y-4">
+          <h4 class="text-xl font-semibold text-gray-200">Technical Stack</h4>
+          <div class="flex flex-wrap gap-3">
+            <span class="px-4 py-2 bg-blue-500/20 rounded-full text-blue-300 text-sm">React</span>
+            <span class="px-4 py-2 bg-purple-500/20 rounded-full text-purple-300 text-sm">JavaScript</span>
+            <span class="px-4 py-2 bg-indigo-500/20 rounded-full text-indigo-300 text-sm">TypeScript</span>
+            <span class="px-4 py-2 bg-pink-500/20 rounded-full text-pink-300 text-sm">Tailwind CSS</span>
+            <span class="px-4 py-2 bg-teal-500/20 rounded-full text-teal-300 text-sm">Node.js</span>
+            <span class="px-4 py-2 bg-teal-500/20 rounded-full text-teal-300 text-sm">MongoDB</span>
+            <span class="px-4 py-2 bg-teal-500/20 rounded-full text-teal-300 text-sm">GraphQL</span>
+            <span class="px-4 py-2 bg-teal-500/20 rounded-full text-teal-300 text-sm">Redux</span>
+            <span class="px-4 py-2 bg-teal-500/20 rounded-full text-teal-300 text-sm">Apollo clients</span>
+            <span class="px-4 py-2 bg-teal-500/20 rounded-full text-teal-300 text-sm">Java</span>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-4 mt-8">
+        <a href="./image/React_CV_Prabin_KTM_Updated.pdf" download
+          class="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold text-white hover:shadow-xl transition-all flex items-center justify-center gap-2">
+          <i class="fas fa-download"></i> Download CV
+        </a>
+        <a href="#contact"
+          class="px-6 py-3 border border-blue-500 rounded-lg font-semibold text-white hover:bg-blue-500/20 transition-all flex items-center justify-center gap-2">
+          <i class="fas fa-paper-plane"></i> Contact Me
+        </a>
+         <a href="https://github.com/prabin012" target="_blank"
+          class="p-3 rounded-full bg-gray-900 hover:bg-gray-800 transition-all">
+          <i class="fab fa-github text-xl text-white"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/iprabin/" target="_blank"
+          class="p-3 rounded-full bg-gray-900 hover:bg-gray-800 transition-all">
+          <i class="fab fa-linkedin text-xl text-blue-400"></i>
+        </a>
+           <a href="https://www.instagram.com/i_prabin01/" target="_blank"
+          class="p-3 rounded-full bg-gray-900 hover:bg-gray-800 transition-all">
+          <i class="fab fa-instagram text-xl text-pink-400"></i>
+        </a>
+      </div>
+      <div class="mt-8 flex gap-6">
+       
+     
+        <!-- <a href="tel:+977-9808676092" class="p-3 rounded-full bg-gray-900 hover:bg-gray-800 transition-all">
+          <i class="fab fa-whatsapp text-xl text-green-400"></i>
+        </a> -->
+      </div>
+    </div>
+  </section>
+</div>
+
+
+
      <div class="bg-[#010106] text-white" id="education">
     <section id="Education" class="py-20 px-4">
       <div class="max-w-7xl mx-auto">
         <h2
-          class="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
+          class="text-4xl py-12 font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
         >
           Academic Journey
         </h2>
 
         <div class="relative timeline">
           <div id="educationContainer" class="relative space-y-16">
-            <!-- Education cards will be inserted here -->
           </div>
         </div>
       </div>
@@ -228,167 +407,358 @@
     </script>
   </div>
 
-   
-    <div class="bg-[#010106] text-white" id="skills">
+
+  <!--  -->
+<div class="bg-[#010106] text-white">
+  <div class="wrapper">
     <section class="py-20 px-4">
       <div class="max-w-7xl mx-auto">
-        <h2
-          class="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent"
-        >
+        <h2 class="text-4xl font-bold py-12 text-center mb-16 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
           Technical Skills & Applications
         </h2>
 
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          id="skillsContainer"
-        >
-          <!-- Skills will be dynamically generated here -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- JavaScript Skill Card -->
+          <div class="skill-card group relative p-8 bg-gray-900/50 backdrop-blur-sm rounded-2xl border border-gray-800 hover:border-yellow-500/50 transition-all duration-300">
+            <div class="absolute inset-0 bg-yellow-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-16 h-16 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-xl flex items-center justify-center">
+                <i class="fa-brands fa-js text-3xl text-white"></i>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold">JavaScript</h3>
+                <p class="text-gray-400 text-sm">Web Apps, SPAs, Browser Extensions</p>
+              </div>
+            </div>
+
+            <div class="feature-list space-y-4 mb-6">
+              <h4 class="text-sm font-semibold text-yellow-400 mb-2">Key Features:</h4>
+              <ul class="space-y-3">
+                <li class="feature-item transition-all duration-300">
+                  <div class="flex items-center gap-3">
+                    <div class="feature-indicator w-2 h-2 bg-yellow-400 rounded-full transition-transform"></div>
+                    <span class="text-gray-300">ES6+ Syntax</span>
+                  </div>
+                </li>
+                <li class="feature-item transition-all duration-300">
+                  <div class="flex items-center gap-3">
+                    <div class="feature-indicator w-2 h-2 bg-yellow-400 rounded-full transition-transform"></div>
+                    <span class="text-gray-300">Async/Await</span>
+                  </div>
+                </li>
+                <li class="feature-item transition-all duration-300">
+                  <div class="flex items-center gap-3">
+                    <div class="feature-indicator w-2 h-2 bg-yellow-400 rounded-full transition-transform"></div>
+                    <span class="text-gray-300">DOM Manipulation</span>
+                  </div>
+                </li>
+                <li class="feature-item transition-all duration-300">
+                  <div class="flex items-center gap-3">
+                    <div class="feature-indicator w-2 h-2 bg-yellow-400 rounded-full transition-transform"></div>
+                    <span class="text-gray-300">API Integration</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-auto pt-4 border-t border-gray-800">
+              <div class="flex justify-between text-sm text-gray-400 mb-2">
+                <span>Proficiency:</span>
+                <span>90%</span>
+              </div>
+              <div class="h-2 bg-gray-800 rounded-full overflow-hidden">
+                <div class="progress-bar h-full rounded-full bg-gradient-to-r from-yellow-400 to-amber-500" style="width: 90%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- React.js Skill Card -->
+          <div class="skill-card group relative p-8 bg-gray-900/50 backdrop-blur-sm rounded-2xl border border-gray-800 hover:border-blue-500/50 transition-all duration-300">
+            <div class="absolute inset-0 bg-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-xl flex items-center justify-center">
+                <i class="fa-brands fa-react text-3xl text-white"></i>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold">React.js</h3>
+                <p class="text-gray-400 text-sm">Dashboards, E-commerce, Real-Time Apps</p>
+              </div>
+            </div>
+
+            <div class="feature-list space-y-4 mb-6">
+              <h4 class="text-sm font-semibold text-blue-400 mb-2">Key Features:</h4>
+              <ul class="space-y-3">
+                <li class="feature-item transition-all duration-300">
+                  <div class="flex items-center gap-3">
+                    <div class="feature-indicator w-2 h-2 bg-blue-400 rounded-full transition-transform"></div>
+                    <span class="text-gray-300">Hooks</span>
+                  </div>
+                </li>
+                <li class="feature-item transition-all duration-300">
+                  <div class="flex items-center gap-3">
+                    <div class="feature-indicator w-2 h-2 bg-blue-400 rounded-full transition-transform"></div>
+                    <span class="text-gray-300">Context API</span>
+                  </div>
+                </li>
+                <li class="feature-item transition-all duration-300">
+                  <div class="flex items-center gap-3">
+                    <div class="feature-indicator w-2 h-2 bg-blue-400 rounded-full transition-transform"></div>
+                    <span class="text-gray-300">React Router</span>
+                  </div>
+                </li>
+                <li class="feature-item transition-all duration-300">
+                  <div class="flex items-center gap-3">
+                    <div class="feature-indicator w-2 h-2 bg-blue-400 rounded-full transition-transform"></div>
+                    <span class="text-gray-300">Component Library</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-auto pt-4 border-t border-gray-800">
+              <div class="flex justify-between text-sm text-gray-400 mb-2">
+                <span>Proficiency:</span>
+                <span>85%</span>
+              </div>
+              <div class="h-2 bg-gray-800 rounded-full overflow-hidden">
+                <div class="progress-bar h-full rounded-full bg-gradient-to-r from-blue-400 to-cyan-500" style="width: 85%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Node.js Skill Card -->
+          <div class="skill-card group relative p-8 bg-gray-900/50 backdrop-blur-sm rounded-2xl border border-gray-800 hover:border-green-500/50 transition-all duration-300">
+            <div class="absolute inset-0 bg-green-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-500 rounded-xl flex items-center justify-center">
+                <i class="fa-brands fa-node-js text-3xl text-white"></i>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold">Node.js</h3>
+                <p class="text-gray-400 text-sm">Backend Services, CLI Tools, Microservices</p>
+              </div>
+            </div>
+
+            <div class="feature-list space-y-4 mb-6">
+              <h4 class="text-sm font-semibold text-green-400 mb-2">Key Features:</h4>
+              <ul class="space-y-3">
+                <li class="feature-item transition-all duration-300">
+                  <div class="flex items-center gap-3">
+                    <div class="feature-indicator w-2 h-2 bg-green-400 rounded-full transition-transform"></div>
+                    <span class="text-gray-300">REST APIs</span>
+                  </div>
+                </li>
+                <li class="feature-item transition-all duration-300">
+                  <div class="flex items-center gap-3">
+                    <div class="feature-indicator w-2 h-2 bg-green-400 rounded-full transition-transform"></div>
+                    <span class="text-gray-300">Express.js</span>
+                  </div>
+                </li>
+                <li class="feature-item transition-all duration-300">
+                  <div class="flex items-center gap-3">
+                    <div class="feature-indicator w-2 h-2 bg-green-400 rounded-full transition-transform"></div>
+                    <span class="text-gray-300">JWT Auth</span>
+                  </div>
+                </li>
+                <li class="feature-item transition-all duration-300">
+                  <div class="flex items-center gap-3">
+                    <div class="feature-indicator w-2 h-2 bg-green-400 rounded-full transition-transform"></div>
+                    <span class="text-gray-300">Web Sockets</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-auto pt-4 border-t border-gray-800">
+              <div class="flex justify-between text-sm text-gray-400 mb-2">
+                <span>Proficiency:</span>
+                <span>80%</span>
+              </div>
+              <div class="h-2 bg-gray-800 rounded-full overflow-hidden">
+                <div class="progress-bar h-full rounded-full bg-gradient-to-r from-green-400 to-emerald-500" style="width: 80%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tailwind CSS Skill Card -->
+          <div class="skill-card group relative p-8 bg-gray-900/50 backdrop-blur-sm rounded-2xl border border-gray-800 hover:border-teal-500/50 transition-all duration-300">
+            <div class="absolute inset-0 bg-teal-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-16 h-16 bg-gradient-to-br from-teal-400 to-blue-500 rounded-xl flex items-center justify-center">
+                <i class="fa-brands fa-apple text-3xl text-white"></i>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold">Tailwind CSS</h3>
+                <p class="text-gray-400 text-sm">Utility-First Framework</p>
+              </div>
+            </div>
+
+            <div class="feature-list space-y-4 mb-6">
+              <h4 class="text-sm font-semibold text-teal-400 mb-2">Key Features:</h4>
+              <ul class="space-y-3">
+                <li class="feature-item transition-all duration-300">
+                  <div class="flex items-center gap-3">
+                    <div class="feature-indicator w-2 h-2 bg-teal-400 rounded-full transition-transform"></div>
+                    <span class="text-gray-300">Responsive Layouts</span>
+                  </div>
+                </li>
+                <li class="feature-item transition-all duration-300">
+                  <div class="flex items-center gap-3">
+                    <div class="feature-indicator w-2 h-2 bg-teal-400 rounded-full transition-transform"></div>
+                    <span class="text-gray-300">Flexbox/Grid Support</span>
+                  </div>
+                </li>
+                <li class="feature-item transition-all duration-300">
+                  <div class="flex items-center gap-3">
+                    <div class="feature-indicator w-2 h-2 bg-teal-400 rounded-full transition-transform"></div>
+                    <span class="text-gray-300">Custom Themes</span>
+                  </div>
+                </li>
+                <li class="feature-item transition-all duration-300">
+                  <div class="flex items-center gap-3">
+                    <div class="feature-indicator w-2 h-2 bg-teal-400 rounded-full transition-transform"></div>
+                    <span class="text-gray-300">JIT Compilation</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-auto pt-4 border-t border-gray-800">
+              <div class="flex justify-between text-sm text-gray-400 mb-2">
+                <span>Proficiency:</span>
+                <span>95%</span>
+              </div>
+              <div class="h-2 bg-gray-800 rounded-full overflow-hidden">
+                <div class="progress-bar h-full rounded-full bg-gradient-to-r from-teal-400 to-blue-500" style="width: 95%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Next.js Skill Card -->
+          <div class="skill-card group relative p-8 bg-gray-900/50 backdrop-blur-sm rounded-2xl border border-gray-800 hover:border-indigo-500/50 transition-all duration-300">
+            <div class="absolute inset-0 bg-indigo-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-16 h-16 bg-gradient-to-br from-indigo-400 to-blue-600 rounded-xl flex items-center justify-center">
+                <i class="fa-brands fa-react text-3xl text-white"></i>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold">Next.js</h3>
+                <p class="text-gray-400 text-sm">SSR, SSG, JAMstack, SEO</p>
+              </div>
+            </div>
+
+            <div class="feature-list space-y-4 mb-6">
+              <h4 class="text-sm font-semibold text-indigo-400 mb-2">Key Features:</h4>
+              <ul class="space-y-3">
+                <li class="feature-item transition-all duration-300">
+                  <div class="flex items-center gap-3">
+                    <div class="feature-indicator w-2 h-2 bg-indigo-400 rounded-full transition-transform"></div>
+                    <span class="text-gray-300">Server-Side Rendering</span>
+                  </div>
+                </li>
+                <li class="feature-item transition-all duration-300">
+                  <div class="flex items-center gap-3">
+                    <div class="feature-indicator w-2 h-2 bg-indigo-400 rounded-full transition-transform"></div>
+                    <span class="text-gray-300">Static Site Generation</span>
+                  </div>
+                </li>
+                <li class="feature-item transition-all duration-300">
+                  <div class="flex items-center gap-3">
+                    <div class="feature-indicator w-2 h-2 bg-indigo-400 rounded-full transition-transform"></div>
+                    <span class="text-gray-300">File-Based Routing</span>
+                  </div>
+                </li>
+                <li class="feature-item transition-all duration-300">
+                  <div class="flex items-center gap-3">
+                    <div class="feature-indicator w-2 h-2 bg-indigo-400 rounded-full transition-transform"></div>
+                    <span class="text-gray-300">API Routes</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-auto pt-4 border-t border-gray-800">
+              <div class="flex justify-between text-sm text-gray-400 mb-2">
+                <span>Proficiency:</span>
+                <span>88%</span>
+              </div>
+              <div class="h-2 bg-gray-800 rounded-full overflow-hidden">
+                <div class="progress-bar h-full rounded-full bg-gradient-to-r from-indigo-400 to-blue-600" style="width: 88%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-card group relative p-8 bg-gray-900/50 backdrop-blur-sm rounded-2xl border border-gray-800 hover:border-indigo-500/50 transition-all duration-300">
+            <div class="absolute inset-0 bg-indigo-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-16 h-16 bg-gradient-to-br from-indigo-400 to-blue-600 rounded-xl flex items-center justify-center">
+                <i class="fa-brands fa-react text-3xl text-white"></i>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold">Next.js</h3>
+                <p class="text-gray-400 text-sm">SSR, SSG, JAMstack, SEO</p>
+              </div>
+            </div>
+
+            <div class="feature-list space-y-4 mb-6">
+              <h4 class="text-sm font-semibold text-indigo-400 mb-2">Key Features:</h4>
+              <ul class="space-y-3">
+                <li class="feature-item transition-all duration-300">
+                  <div class="flex items-center gap-3">
+                    <div class="feature-indicator w-2 h-2 bg-indigo-400 rounded-full transition-transform"></div>
+                    <span class="text-gray-300">Server-Side Rendering</span>
+                  </div>
+                </li>
+                <li class="feature-item transition-all duration-300">
+                  <div class="flex items-center gap-3">
+                    <div class="feature-indicator w-2 h-2 bg-indigo-400 rounded-full transition-transform"></div>
+                    <span class="text-gray-300">Static Site Generation</span>
+                  </div>
+                </li>
+                <li class="feature-item transition-all duration-300">
+                  <div class="flex items-center gap-3">
+                    <div class="feature-indicator w-2 h-2 bg-indigo-400 rounded-full transition-transform"></div>
+                    <span class="text-gray-300">File-Based Routing</span>
+                  </div>
+                </li>
+                <li class="feature-item transition-all duration-300">
+                  <div class="flex items-center gap-3">
+                    <div class="feature-indicator w-2 h-2 bg-indigo-400 rounded-full transition-transform"></div>
+                    <span class="text-gray-300">API Routes</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-auto pt-4 border-t border-gray-800">
+              <div class="flex justify-between text-sm text-gray-400 mb-2">
+                <span>Proficiency:</span>
+                <span>88%</span>
+              </div>
+              <div class="h-2 bg-gray-800 rounded-full overflow-hidden">
+                <div class="progress-bar h-full rounded-full bg-gradient-to-r from-indigo-400 to-blue-600" style="width: 88%"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-
-    <script>
-      const skillsData = [
-        {
-          title: "JavaScript",
-          icon: "fa-brands fa-js",
-          color: "from-yellow-400 to-amber-500",
-          features: [
-            "ES6+ Syntax",
-            "Async/Await",
-            "DOM Manipulation",
-            "API Integration",
-          ],
-          applications: ["Web Apps", "SPAs", "Browser Extensions"],
-          proficiency: 90,
-        },
-        {
-          title: "React.js",
-          icon: "fa-brands fa-react",
-          color: "from-blue-400 to-cyan-500",
-          features: [
-            "Hooks",
-            "Context API",
-            "React Router",
-            "Component Library",
-          ],
-          applications: ["Dashboards", "E-commerce", "Real-Time Apps"],
-          proficiency: 85,
-        },
-        {
-          title: "Node.js",
-          icon: "fa-brands fa-node-js",
-          color: "from-green-400 to-emerald-500",
-          features: ["REST APIs", "Express.js", "JWT Auth", "Web Sockets"],
-          applications: ["Backend Services", "CLI Tools", "Microservices"],
-          proficiency: 80,
-        },
-        {
-          title: "MongoDB",
-          icon: "fa-solid fa-database",
-          color: "from-green-500 to-lime-400",
-          features: [
-            "Schema Design",
-            "Aggregation",
-            "Indexing",
-            "Mongoose ORM",
-          ],
-          applications: ["User Data", "Analytics", "Content Management"],
-          proficiency: 75,
-        },
-        {
-          title: "Git & GitHub",
-          icon: "fa-brands fa-git-alt",
-          color: "from-red-400 to-orange-500",
-          features: ["Version Control", "CI/CD", "Branching", "Code Reviews"],
-          applications: [
-            "Team Collaboration",
-            "Open Source",
-            "Workflow Automation",
-          ],
-          proficiency: 85,
-        },
-        {
-          title: "Python",
-          icon: "fa-brands fa-python",
-          color: "from-blue-600 to-sky-400",
-          features: ["Data Analysis", "Automation", "Web Scraping", "Flask"],
-          applications: ["Scripting", "Machine Learning", "APIs"],
-          proficiency: 70,
-        },
-      ];
-
-      const container = document.getElementById("skillsContainer");
-
-      skillsData.forEach((skill) => {
-        const card = document.createElement("div");
-        card.className = `skill-card group relative p-8 bg-gray-900/50 backdrop-blur-sm rounded-2xl border border-gray-800 hover:border-${
-          skill.color.split("-")[1]
-        }-500/50 transition-all duration-300`;
-        card.innerHTML = `
-                <div class="absolute inset-0 bg-${
-                  skill.color.split("-")[1]
-                }-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                
-                <div class="flex items-center gap-4 mb-6">
-                    <div class="w-16 h-16 bg-gradient-to-br ${
-                      skill.color
-                    } rounded-xl flex items-center justify-center">
-                        <i class="${skill.icon} text-3xl text-white"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-bold">${skill.title}</h3>
-                        <p class="text-gray-400 text-sm">${skill.applications.join(
-                          ", "
-                        )}</p>
-                    </div>
-                </div>
-
-                <div class="feature-list space-y-4 mb-6">
-                    <h4 class="text-sm font-semibold text-${
-                      skill.color.split("-")[1]
-                    }-400 mb-2">Key Features:</h4>
-                    <ul class="space-y-3">
-                        ${skill.features
-                          .map(
-                            (feature) => `
-                            <li class="feature-item transition-all duration-300">
-                                <div class="flex items-center gap-3">
-                                    <div class="feature-indicator w-2 h-2 bg-${
-                                      skill.color.split("-")[1]
-                                    }-400 rounded-full transition-transform"></div>
-                                    <span class="text-gray-300">${feature}</span>
-                                </div>
-                            </li>
-                        `
-                          )
-                          .join("")}
-                    </ul>
-                </div>
-
-                <div class="mt-auto pt-4 border-t border-gray-800">
-                    <div class="flex justify-between text-sm text-gray-400 mb-2">
-                        <span>Proficiency:</span>
-                        <span>${skill.proficiency}%</span>
-                    </div>
-                    <div class="h-2 bg-gray-800 rounded-full overflow-hidden">
-                        <div class="progress-bar h-full rounded-full bg-gradient-to-r ${
-                          skill.color
-                        }" style="width: ${skill.proficiency}%"></div>
-                    </div>
-                </div>
-            `;
-        container.appendChild(card);
-      });
-    </script>
   </div>
+</div>
 
+  <!--  -->
+    
   
-     <div class="bg-[#010106] text-white min-h-screen" id="projects">
+     <div class="bg-[#010106] text-white " id="projects">
     <section class="py-20 px-4">
       <div class="max-w-7xl mx-auto">
         <h2
-          class="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent"
+          class="text-4xl font-bold py-12 text-center mb-16 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent"
         >
           Featured Projects
         </h2>
@@ -523,12 +893,11 @@
       });
     </script>
   </div>
-
    
      <div class="bg-[#010106] text-white" id="Certificates">
     <section class="py-20 px-4">
       <div class="max-w-7xl mx-auto">
-        <h2 class="text-5xl font-bold text-center mb-16 gradient-text">
+        <h2 class="text-5xl font-bold py-12 text-center mb-16 text-white">
           Research & Publications
         </h2>
 
@@ -578,9 +947,9 @@
               <a
                 href="https://ijsrem.com/download/online-voting-system-using-blockchain-technology/"
                 target="_blank"
-                class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg font-semibold hover:shadow-xl transition-all"
+                class="inline-flex text-white no-underline items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg font-semibold hover:shadow-xl transition-all"
               >
-                <i class="fas fa-external-link-alt"></i>
+                <i class="fas fa-external-link-alt text-white"></i>
                 Explore Research Paper
               </a>
             </div>
@@ -588,7 +957,7 @@
         </div>
 
         <!-- Research Item 2 -->
-        <div class="research-card mb-16 animate-fadeIn">
+        <!-- <div class="research-card mb-16 animate-fadeIn">
           <div
             class="flex flex-col lg:flex-row-reverse gap-8 items-center bg-gray-900/50 backdrop-blur-sm rounded-3xl p-8 border border-gray-800 hover:border-blue-500/30 transition-all duration-300"
           >
@@ -639,7 +1008,7 @@
               </a>
             </div>
           </div>
-        </div>
+        </div> -->
 
       </div>
     </section>
