@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects - Prabin Mahato</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+    <style>
+      @keyframes cardEntrance {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .project-card {
+        animation: cardEntrance 0.6s ease-out forwards;
+      }
+      .project-card:hover .tech-badge {
+        transform: translateY(-3px);
+        background: rgba(139, 92, 246, 0.15);
+      }
+      .github-icon:hover {
+        transform: rotate(15deg) scale(1.1);
+      }
+    </style>
+  </head>
+  <body class="bg-[#010106] text-white min-h-screen">
+    <section class="py-20 px-4">
+      <div class="max-w-7xl mx-auto">
+        <h2
+          class="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent"
+        >
+          Featured Projects
+        </h2>
+
+        <div
+          id="projectContainer"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          <!-- Projects will be dynamically generated here -->
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const projects = [
+        {
+          title: "Task Management System",
+          description:
+            "Full stack task management system with React and Node.js featuring real-time updates and user authentication.",
+          demoLink: "https://mytaskmanagement.netlify.app/",
+          githubLink: "https://github.com/prabin012/Task_Management",
+          technologies: ["React", "Node.js", "MongoDB", "JWT Auth"],
+          icon: "fa-solid fa-tasks",
+        },
+        {
+          title: "Online Bidding Platform",
+          description:
+            "User-friendly marketplace for buying and selling products with real-time bidding functionality.",
+          demoLink: "#",
+          githubLink: "https://github.com/prabin012/BidingwebApplication",
+          technologies: ["React", "Express", "WebSocket", "MongoDB"],
+          icon: "fa-solid fa-gavel",
+        },
+        {
+          title: "Restaurant Management",
+          description:
+            "Complete restaurant management system with menu customization and online ordering capabilities.",
+          demoLink: "https://hckatiyahouse.netlify.app/",
+          githubLink: "https://github.com/prabin012/HotelCelebration",
+          technologies: ["React", "Node.js", "Payment Gateway", "MongoDB"],
+          icon: "fa-solid fa-utensils",
+        },
+        {
+          title: "Portfolio Builder",
+          description:
+            "No-code portfolio creation platform with customizable templates and dynamic content management.",
+          demoLink: "https://myportofolios.netlify.app/",
+          githubLink: "https://github.com/prabin012/my_portfolio",
+          technologies: ["React", "Node.js", "PDF Generation", "AWS S3"],
+          icon: "fa-solid fa-id-card",
+        },
+        {
+          title: "Medical Booking System",
+          description:
+            "Full-stack appointment scheduling system for healthcare providers with calendar integration.",
+          demoLink: "#",
+          githubLink: "https://github.com/prabin012/DoctorAppointmentLaravel",
+          technologies: ["Laravel", "MySQL", "FullCalendar", "Twilio"],
+          icon: "fa-solid fa-calendar-check",
+        },
+        {
+          title: "Flight Management",
+          description:
+            "Airline reservation system with ticket booking and management features.",
+          demoLink: "#",
+          githubLink:
+            "https://github.com/prabin012/FlightManagementSystem-using-Java",
+          technologies: ["Java", "Swing", "MySQL", "Jasper Reports"],
+          icon: "fa-solid fa-plane",
+        },
+      ];
+
+      const projectContainer = document.getElementById("projectContainer");
+
+      projects.forEach((project, index) => {
+        const projectCard = document.createElement("div");
+        projectCard.className = `project-card group relative p-8 bg-gray-900/50 backdrop-blur-sm rounded-2xl border border-gray-800 hover:border-purple-500/30 transition-all duration-300`;
+        projectCard.innerHTML = `
+                <div class="absolute inset-0 bg-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                
+                <div class="flex flex-col h-full">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-500 rounded-xl flex items-center justify-center">
+                            <i class="${project.icon} text-4xl text-white"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold mb-2">${
+                              project.title
+                            }</h3>
+                            <div class="flex items-center gap-3">
+                                <a href="${project.demoLink}" target="_blank" 
+                                   class="px-4 py-1 bg-blue-500/20 text-blue-300 rounded-lg hover:bg-blue-500/30 transition-colors 
+                                          ${
+                                            project.demoLink === "#"
+                                              ? "opacity-50 cursor-not-allowed"
+                                              : ""
+                                          }"
+                                   ${
+                                     project.demoLink === "#" ? "disabled" : ""
+                                   }>
+                                    Live Demo
+                                </a>
+                                <a href="${project.githubLink}" target="_blank" 
+                                   class="github-icon px-2 py-1 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors">
+                                    <i class="fab fa-github text-xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-gray-300 mb-6 flex-grow">${
+                      project.description
+                    }</p>
+
+                    <div class="mt-auto pt-4 border-t border-gray-800">
+                        <h4 class="text-sm font-semibold text-purple-400 mb-3">Technology Stack</h4>
+                        <div class="flex flex-wrap gap-3">
+                            ${project.technologies
+                              .map(
+                                (tech) => `
+                                <span class="tech-badge px-3 py-1.5 bg-gray-800 rounded-full text-sm text-gray-300 
+                                            transition-all duration-300 cursor-default">
+                                    ${tech}
+                                </span>
+                            `
+                              )
+                              .join("")}
+                        </div>
+                    </div>
+                </div>
+            `;
+        projectContainer.appendChild(projectCard);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prabin Kumar Mahato | Full Stack Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+    <style>
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+      .floating {
+        animation: float 6s ease-in-out infinite;
+      }
+      .gradient-text {
+        background: linear-gradient(45deg, #030436, #ec4899);
+        -webkit-text-fill-color: transparent;
+      }
+      .hover-tilt {
+        transition: transform 0.3s ease;
+      }
+      .hover-tilt:hover {
+        transform: perspective(1000px) rotateX(10deg) rotateY(10deg);
+      }
+    </style>
+  </head>
+  <body class="bg-[#010106] min-h-screen">
+    <div class="container mx-auto px-4 py-12">
+      <div
+        class="flex flex-col lg:flex-row items-center justify-between gap-12"
+      >
+        <!-- Left Column -->
+
+        <!-- Right Column -->
+        <div class="w-full lg:w-1/2 space-y-8">
+          <h1
+            class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-pink-400 mb-8"
+          >
+            Turning Ideas Into<br />Digital Reality
+          </h1>
+
+          <p class="text-lg text-gray-300 leading-relaxed">
+            Passionate full-stack developer specializing in crafting robust web
+            applications. With 2+ years of hands-on experience in transforming
+            complex problems into elegant solutions.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-6 mt-12">
+            <a
+              href="./image/React_CV_Prabin_KTM_Updated.pdf"
+              download
+              class="flex-1 py-4 px-8 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg font-semibold text-white text-center hover:from-indigo-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl"
+            >
+              Download CV
+            </a>
+            <a
+              href="mailto:your.email@example.com"
+              class="flex-1 py-4 px-8 border-2 border-indigo-600 rounded-lg font-semibold text-white text-center hover:bg-indigo-600/20 transition-all shadow-lg hover:shadow-xl"
+            >
+              Let's Connect
+            </a>
+          </div>
+
+          <div class="mt-12 grid grid-cols-2 gap-4 text-gray-300">
+            <div class="p-4 bg-white/5 rounded-lg backdrop-blur-sm">
+              <h3 class="text-indigo-400 font-bold mb-2">Tech Stack</h3>
+              <p class="text-sm">React, Node.js, Python, MongoDB</p>
+            </div>
+            <div class="p-4 bg-white/5 rounded-lg backdrop-blur-sm">
+              <h3 class="text-pink-400 font-bold mb-2">Passion</h3>
+              <p class="text-sm">Open Source • UI/UX • AI Integration</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="w-full lg:w-1/2 space-y-8 relative flex justify-center flex-col items-center"
+        >
+          <div class="floating hover-tilt">
+            <div class="relative inline-block">
+              <img
+                src="image/p10.jpg"
+                alt="Prabin Kumar Mahato"
+                class="w-64 h-64 rounded-full border-4 border-white/20 shadow-2xl object-cover"
+              />
+              <div
+                class="absolute inset-0 rounded-full border-4 border-transparent animate-spin-slow"
+                style="border-top-color: #03042a; border-right-color: #eb5b0e"
+              ></div>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <h2 class="text-4xl font-bold text-white text-center lg:text-left">
+              Prabin Kumar <span class="">Mahato</span>
+            </h2>
+            <p class="text-xl text-purple-200 text-center lg:text-left">
+              Full Stack Developer & Problem Solver
+            </p>
+
+            <div class="flex justify-center lg:justify-start space-x-6 mt-6">
+              <a
+                href="https://github.com/prabin012"
+                target="_blank"
+                class="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300"
+              >
+                <i class="fab fa-github text-2xl text-white"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/iprabin/"
+                target="_blank"
+                class="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300"
+              >
+                <i class="fab fa-linkedin text-2xl text-blue-400"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/iprabin/"
+                target="_blank"
+                class="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300"
+              >
+                <i class="fab fa-linkedin text-2xl text-blue-400"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Animated Background Elements -->
+    <div
+      class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none"
+    >
+      <div
+        class="absolute w-96 h-96 bg-purple-500/10 rounded-full -top-48 -left-48"
+      ></div>
+      <div
+        class="absolute w-96 h-96 bg-indigo-500/10 rounded-full bottom-0 -right-48"
+      ></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Prabin Mahato</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+    <style>
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .contact-card {
+        animation: fadeIn 0.6s ease-out;
+      }
+      .form-input:focus {
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+      }
+    </style>
+  </head>
+  <body class="bg-[#010106] text-white">
+    <section class="py-20 px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h1
+            class="text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4"
+          >
+            Let's Connect
+          </h1>
+          <p class="text-xl text-gray-400">
+            Have a project in mind? Let's make it reality!
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <!-- Contact Info Card -->
+          <div
+            class="contact-card bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-800 hover:border-blue-500/30 transition-all duration-300"
+          >
+            <div class="space-y-6">
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-14 h-14 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center"
+                >
+                  <i class="fas fa-map-marker-alt text-2xl text-white"></i>
+                </div>
+                <div>
+                  <h2 class="text-2xl font-bold">Location</h2>
+                  <p class="text-gray-400">Janakpur, Dhanusa, Nepal</p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-14 h-14 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center"
+                >
+                  <i class="fas fa-envelope text-2xl text-white"></i>
+                </div>
+                <div>
+                  <h2 class="text-2xl font-bold">Email</h2>
+                  <a
+                    href="mailto:prabinmahato415@gmail.com"
+                    class="text-blue-400 hover:text-blue-300"
+                  >
+                    prabinmahato415@gmail.com
+                  </a>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-14 h-14 bg-gradient-to-br from-pink-500 to-red-500 rounded-xl flex items-center justify-center"
+                >
+                  <i class="fas fa-phone-alt text-2xl text-white"></i>
+                </div>
+                <div>
+                  <h2 class="text-2xl font-bold">Phone</h2>
+                  <p class="text-gray-400">+977 - 9808676092</p>
+                  <p class="text-gray-400">+91 - 8969360908</p>
+                </div>
+              </div>
+
+              <div class="pt-6 border-t border-gray-800">
+                <h3 class="text-xl font-semibold mb-4">Connect Socially</h3>
+                <div class="flex gap-6">
+                  <a
+                    href="https://www.facebook.com/kumarprabinsp"
+                    target="_blank"
+                    class="p-3 bg-gray-800 rounded-full hover:bg-blue-600 transition-all"
+                  >
+                    <i class="fab fa-facebook-f text-2xl"></i>
+                  </a>
+                  <a
+                    href="https://www.instagram.com/i_prabin01"
+                    target="_blank"
+                    class="p-3 bg-gray-800 rounded-full hover:bg-pink-600 transition-all"
+                  >
+                    <i class="fab fa-instagram text-2xl"></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/feed/"
+                    target="_blank"
+                    class="p-3 bg-gray-800 rounded-full hover:bg-blue-400 transition-all"
+                  >
+                    <i class="fab fa-linkedin-in text-2xl"></i>
+                  </a>
+                  <a
+                    href="https://github.com/"
+                    target="_blank"
+                    class="p-3 bg-gray-800 rounded-full hover:bg-gray-600 transition-all"
+                  >
+                    <i class="fab fa-github text-2xl"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div
+            class="contact-card bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-800 hover:border-purple-500/30 transition-all duration-300"
+          >
+            <form
+              class="space-y-6"
+              onsubmit="sendEmail(); reset(); return false"
+            >
+              <div>
+                <label class="block text-sm font-semibold mb-2"
+                  >Full Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  required
+                  class="form-input w-full px-4 py-3 bg-gray-800 rounded-lg border border-gray-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/50 transition-all"
+                />
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label class="block text-sm font-semibold mb-2">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    required
+                    class="form-input w-full px-4 py-3 bg-gray-800 rounded-lg border border-gray-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/50 transition-all"
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm font-semibold mb-2">Phone</label>
+                  <input
+                    type="tel"
+                    id="number"
+                    required
+                    class="form-input w-full px-4 py-3 bg-gray-800 rounded-lg border border-gray-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/50 transition-all"
+                  />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label class="block text-sm font-semibold mb-2"
+                    >Country</label
+                  >
+                  <input
+                    type="text"
+                    id="country"
+                    class="form-input w-full px-4 py-3 bg-gray-800 rounded-lg border border-gray-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/50 transition-all"
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm font-semibold mb-2">City</label>
+                  <input
+                    type="text"
+                    id="city"
+                    class="form-input w-full px-4 py-3 bg-gray-800 rounded-lg border border-gray-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/50 transition-all"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-sm font-semibold mb-2">Message</label>
+                <textarea
+                  id="query"
+                  rows="4"
+                  required
+                  class="form-input w-full px-4 py-3 bg-gray-800 rounded-lg border border-gray-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/50 transition-all"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-[1.02]"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Thank You Message -->
+        <div class="mt-16 text-center border-t border-gray-800 pt-12">
+          <p
+            class="text-xl italic bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent font-medium"
+          >
+            "Thank you for choosing to spend your time with me. I'm honored to
+            have you here and look forward to serving you in the best possible
+            way."
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

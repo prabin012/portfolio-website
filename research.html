@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Research & Publications</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .research-card:hover .research-image {
+        transform: scale(1.03);
+      }
+      .gradient-text {
+        background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    </style>
+  </head>
+  <body class="bg-[#010106] text-white">
+    <section class="py-20 px-4">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-5xl font-bold text-center mb-16 gradient-text">
+          Research & Publications
+        </h2>
+
+        <!-- Research Item 1 -->
+        <div class="research-card mb-16 animate-fadeIn">
+          <div
+            class="flex flex-col lg:flex-row gap-8 items-center bg-gray-900/50 backdrop-blur-sm rounded-3xl p-8 border border-gray-800 hover:border-purple-500/30 transition-all duration-300"
+          >
+            <div
+              class="lg:w-1/2 w-full relative overflow-hidden rounded-2xl group"
+            >
+              <img
+                src="image/r.jpg"
+                alt="Blockchain Voting System"
+                class="research-image w-full h-96 object-cover rounded-2xl transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+              ></div>
+            </div>
+
+            <div class="lg:w-1/2 w-full space-y-6">
+              <h3 class="text-3xl font-bold text-blue-400">
+                Online Voting System Using Blockchain Technology
+              </h3>
+              <p class="text-gray-300 text-lg leading-relaxed">
+                Pioneering research leveraging blockchain technology to
+                revolutionize digital voting systems, ensuring unprecedented
+                security and transparency through decentralized architecture.
+              </p>
+
+              <div class="space-y-4">
+                <div class="flex items-center gap-4 text-blue-300">
+                  <i class="fas fa-book-open text-xl"></i>
+                  <span class="font-semibold"
+                    >International Journal of Scientific Research in Engineering
+                    & Management (IJSREM)</span
+                  >
+                </div>
+
+                <div class="flex items-center gap-4 text-purple-300">
+                  <i class="fas fa-calendar-alt text-xl"></i>
+                  <span class="font-semibold">04 April 2024</span>
+                </div>
+              </div>
+
+              <a
+                href="https://ijsrem.com/download/online-voting-system-using-blockchain-technology/"
+                target="_blank"
+                class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg font-semibold hover:shadow-xl transition-all"
+              >
+                <i class="fas fa-external-link-alt"></i>
+                Explore Research Paper
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Research Item 2 -->
+        <div class="research-card mb-16 animate-fadeIn">
+          <div
+            class="flex flex-col lg:flex-row-reverse gap-8 items-center bg-gray-900/50 backdrop-blur-sm rounded-3xl p-8 border border-gray-800 hover:border-blue-500/30 transition-all duration-300"
+          >
+            <div
+              class="lg:w-1/2 w-full relative overflow-hidden rounded-2xl group"
+            >
+              <img
+                src="image/r.jpg"
+                alt="Secure Voting Mechanism"
+                class="research-image w-full h-96 object-cover rounded-2xl transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+              ></div>
+            </div>
+
+            <div class="lg:w-1/2 w-full space-y-6">
+              <h3 class="text-3xl font-bold text-purple-400">
+                Blockchain-Based Secure Voting Mechanism
+              </h3>
+              <p class="text-gray-300 text-lg leading-relaxed">
+                Innovative study implementing cryptographic principles and smart
+                contracts to develop tamper-proof voting systems with real-time
+                audit capabilities.
+              </p>
+
+              <div class="space-y-4">
+                <div class="flex items-center gap-4 text-blue-300">
+                  <i class="fas fa-book-open text-xl"></i>
+                  <span class="font-semibold"
+                    >International Journal of Blockchain Research</span
+                  >
+                </div>
+
+                <div class="flex items-center gap-4 text-purple-300">
+                  <i class="fas fa-calendar-alt text-xl"></i>
+                  <span class="font-semibold">15 June 2024</span>
+                </div>
+              </div>
+
+              <a
+                href="https://ijsrem.com/download/blockchain-based-secure-voting-mechanism/"
+                target="_blank"
+                class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg font-semibold hover:shadow-xl transition-all"
+              >
+                <i class="fas fa-external-link-alt"></i>
+                Access Full Publication
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add more research items following the same structure -->
+      </div>
+    </section>
+  </body>
+</html>
